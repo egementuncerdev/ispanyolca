@@ -29,10 +29,12 @@ interface Props {
   /** sonuç ekranındaki ana buton */
   doneLabel?: string;
   onDone?: () => void;
+  /** "Yanlışları tekrar et" tıklanınca (ör. kelimeleri SRS'te Unuttum işaretlemek için) */
+  onRetry?: (wrong: Question[]) => void;
   compact?: boolean;
 }
 
-export function QuestionRunner({ questions, strictAccents = false, onFinish, doneLabel = 'Bitir', onDone, compact = false }: Props) {
+export function QuestionRunner({ questions, strictAccents = false, onFinish, doneLabel = 'Bitir', onDone, onRetry, compact = false }: Props) {
   const [round, setRound] = useState(questions);
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState<{ q: Question; ok: boolean }[]>([]);
@@ -87,7 +89,7 @@ export function QuestionRunner({ questions, strictAccents = false, onFinish, don
         <div className="mt-6 flex flex-wrap gap-3">
           {wrong.length > 0 && (
             <Button variant="secondary" icon={<RotateCcw className="size-4" strokeWidth={1.75} />}
-              onClick={() => { setRound(shuffle(wrong)); setIdx(0); setResults([]); setFinished(false); setFirstRound(false); }}>
+              onClick={() => { onRetry?.(wrong); setRound(shuffle(wrong)); setIdx(0); setResults([]); setFinished(false); setFirstRound(false); }}>
               Yanlışları tekrar et
             </Button>
           )}
@@ -150,7 +152,8 @@ function QuestionView({ q, result, onCheck }: { q: Question; result: CheckResult
   if (q.type === 'multiple_choice' || q.type === 'translate_es_tr') {
     return (
       <>
-        <p lang={q.type === 'translate_es_tr' ? 'es' : undefined} className="display mb-6 text-[1.7rem] leading-snug sm:text-[2rem]">{q.prompt}</p>
+        <p lang={q.type === 'translate_es_tr' ? 'es' : undefined} className={`display text-[1.7rem] leading-snug sm:text-[2rem] ${q.hint ? 'mb-1' : 'mb-6'}`}>{q.prompt}</p>
+        {q.hint && <p className="mb-6 text-muted">{q.hint}</p>}
         <div className="grid gap-2 sm:grid-cols-2">
           {options.map((o, i) => {
             const state = !locked ? 'idle' : o === q.answers[0] ? 'good' : o === picked ? 'bad' : 'idle';
@@ -166,7 +169,7 @@ function QuestionView({ q, result, onCheck }: { q: Question; result: CheckResult
     );
   }
 
-  if (q.type === 'word_order') return <WordOrder q={q} locked={locked} onCheck={onCheck} />;
+  if (q.type === 'word_order') return <>{q.hint && <p className="display mb-5 text-[1.5rem] leading-snug">{q.hint}</p>}<WordOrder q={q} locked={locked} onCheck={onCheck} /></>;
 
   if (q.type === 'fill_blank') {
     const [before, after] = q.prompt.split('___');
@@ -180,6 +183,7 @@ function QuestionView({ q, result, onCheck }: { q: Question; result: CheckResult
           </label>
           {after}
         </p>
+        {q.hint && <p className="-mt-3 mb-5 text-muted">{q.hint}</p>}
         {!locked && <Button type="submit" disabled={!text.trim()}>Kontrol et</Button>}
       </form>
     );
@@ -191,7 +195,7 @@ function QuestionView({ q, result, onCheck }: { q: Question; result: CheckResult
       {q.type === 'fix_sentence'
         ? <p lang="es" className="display mb-2 text-[1.7rem] leading-snug text-ink-2 sm:text-[2rem]"><span className="decoration-bad/60 decoration-wavy underline underline-offset-[6px]">{q.prompt}</span></p>
         : <p className="display mb-2 text-[1.7rem] leading-snug sm:text-[2rem]">{q.prompt}</p>}
-      <p className="mb-5 text-sm text-muted">{q.type === 'fix_sentence' ? 'Cümlede bir hata var. Düzeltip doğrusunu yaz.' : 'İspanyolca yaz; aksan eksikse uyarırım.'}</p>
+      <p className="mb-5 text-sm text-muted">{q.type === 'fix_sentence' ? 'Cümlede bir hata var. Düzeltip doğrusunu yaz.' : q.hint ?? 'İspanyolca yaz; aksan eksikse uyarırım.'}</p>
       <div className="flex flex-col gap-2 sm:flex-row">
         <label className="flex-1"><span className="sr-only">Cevabın</span>
           <input ref={inputRef} autoFocus disabled={locked} lang="es" autoComplete="off" autoCapitalize="sentences" spellCheck={false} className={`${inputClass} h-12 text-lg`} value={text} onChange={(e) => setText(e.target.value)} />

@@ -69,6 +69,8 @@ export interface Question {
   parts?: string[];
   pairs?: [string, string][];
   explanation?: string;
+  /** sorunun altında gösterilen yardım (ör. cümlenin Türkçesi) */
+  hint?: string;
   /** aksan düzeltmesi soruluyorsa eksik aksan yanlış sayılır */
   strict?: boolean;
   /** soru üretildiyse kaynak kelime / konu */
