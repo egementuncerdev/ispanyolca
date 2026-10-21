@@ -1,11 +1,12 @@
 /* Kart çalışma oturumu: bekleyen tekrarlar + bugünün yeni kelimeleri */
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
-import { Link } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { Check, Maximize2, Minimize2, X } from 'lucide-react';
 import { useSettings } from '@/app/settings';
 import { useFocusMode } from '@/app/focus';
 import { repos } from '@/lib/storage';
-import { answer, introduce, showAgainSoon, todayPlan } from '@/lib/srs/study';
+import { answer, introduce, showAgainSoon, todayPlan, wordsPlan } from '@/lib/srs/study';
+import { UNIT_BY_ID } from '@/content/course/units';
 import { preview, type Score } from '@/lib/srs/scheduler';
 import { buildPrompt, CARD_TYPE_LABEL, type Prompt } from '@/lib/srs/prompt';
 import { checkAnswer, type CheckResult } from '@/lib/text/normalize';
@@ -44,13 +45,16 @@ export default function StudyPage() {
   const [stats, setStats] = useState({ reviewed: 0, good: 0, newWords: 0 });
   const [nextDue, setNextDue] = useState<string | null>(null);
   const startedAt = useRef(new Date());
+  // ?unite=u1 → yalnız o ünitenin kelimeleri
+  const [params] = useSearchParams();
+  const unit = UNIT_BY_ID[params.get('unite') ?? ''];
   const logged = useRef(false);
 
   // Oturumu kur: yeni kelimeleri tanıt, kuyruğu oluştur
   useEffect(() => {
     let alive = true;
     (async () => {
-      const plan = await todayPlan(repos, settings);
+      const plan = unit ? await wordsPlan(repos, unit.wordIds) : await todayPlan(repos, settings);
       const fresh = await introduce(repos, settings, plan.newWords);
       if (!alive) return;
       // Yeni kelimeler 5'erli gruplar: önce tanıtım, sonra o grubun soruları; en sonda TR→ES kartları
@@ -150,9 +154,9 @@ export default function StudyPage() {
   if (phase === 'empty') {
     return (
       <EmptyState
-        title="Bugünlük kart kalmadı"
-        text="Bekleyen tekrarın yok ve bugünün yeni kelimelerini çalıştın. Yarın yeni kartlar seni bekliyor."
-        action={<ButtonLink to="/kelimeler" variant="secondary">Kelimelere dön</ButtonLink>}
+        title={unit ? 'Bu ünitede çalışılacak kart yok' : 'Bugünlük kart kalmadı'}
+        text={unit ? 'Ünitenin bütün kelimeleri kartlarında ve şu an bekleyen tekrar yok.' : 'Bekleyen tekrarın yok ve bugünün yeni kelimelerini çalıştın. Yarın yeni kartlar seni bekliyor.'}
+        action={unit ? <ButtonLink to={`/kurs/${unit.id}/kelimeler`} variant="secondary">Üniteye dön</ButtonLink> : <ButtonLink to="/kelimeler" variant="secondary">Kelimelere dön</ButtonLink>}
       />
     );
   }
@@ -169,7 +173,7 @@ export default function StudyPage() {
         </dl>
         {nextDue && <p className="mb-8 text-ink-2">Sonraki tekrar: <strong className="text-ink">{untilText(new Date(nextDue), new Date(), settings.timezone, settings.dayStartsAt)}</strong></p>}
         <div className="flex flex-wrap gap-3">
-          <ButtonLink to="/">Ana sayfa</ButtonLink>
+          {unit ? <ButtonLink to={`/kurs/${unit.id}/kelimeler`}>Üniteye dön</ButtonLink> : <ButtonLink to="/">Ana sayfa</ButtonLink>}
           <ButtonLink to="/kelimeler" variant="secondary">Kelimeler</ButtonLink>
         </div>
       </div>

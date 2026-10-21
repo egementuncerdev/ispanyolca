@@ -29,6 +29,15 @@ export async function todayPlan(repos: Repos, settings: Settings, now = new Date
   return { due: due.filter((c) => WORD_BY_ID[c.wordId]), newWords, newToday };
 }
 
+/** Belirli kelimeler için oturum (kurs ünitesi): o kelimelerin bekleyen tekrarları + kartı olmayanlardan en çok `limit` tanesi.
+    Günlük yeni kelime limitine bağlı değildir; kullanıcı bilerek seçmiştir. */
+export async function wordsPlan(repos: Repos, wordIds: string[], limit = 10, now = new Date()): Promise<TodayPlan> {
+  const ids = new Set(wordIds);
+  const [due, known] = await Promise.all([repos.cards.dueBefore(now.toISOString()), repos.cards.wordIds()]);
+  const newWords = wordIds.filter((id) => !known.has(id)).map((id) => WORD_BY_ID[id]).filter(Boolean).slice(0, limit) as Word[];
+  return { due: due.filter((c) => ids.has(c.wordId)).sort((a, b) => a.due.localeCompare(b.due)), newWords, newToday: 0 };
+}
+
 /** Yeni kelimeleri tekrar listesine ekle: ilk iki kart (ES→TR, TR→ES) */
 export async function introduce(repos: Repos, settings: Settings, words: Word[], now = new Date()): Promise<CardState[]> {
   const known = await repos.cards.wordIds();

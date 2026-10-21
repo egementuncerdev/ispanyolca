@@ -12,29 +12,9 @@ import { repos } from '@/lib/storage';
 import { dayKey } from '@/lib/time/dayKey';
 import { PASS, topicProgress } from '@/lib/grammar/progress';
 import { shuffle } from '@/lib/quiz/check';
-import type { GrammarTopic } from '@/types/content';
+import { GrammarTable as Table } from '@/components/grammar/GrammarTable';
 
 const STEPS = ['Anlatım', 'Örnekler', 'Ne zaman?', 'Mini test', 'Alıştırmalar'] as const;
-
-/** İspanyolca kısımları ayırt etmek için: tablo hücreleri ve örnekler İspanyolca */
-function Table({ t }: { t: GrammarTopic }) {
-  if (!t.table) return null;
-  return (
-    <div className="overflow-x-auto">
-      <table className={`w-full text-left text-[15px] ${t.table.headers.length > 2 ? 'min-w-[30rem]' : ''}`}>
-        {t.table.caption && <caption className="eyebrow mb-2 text-left" lang="es">{t.table.caption}</caption>}
-        <thead><tr className="border-b border-line-2">{t.table.headers.map((h, i) => <th key={i} scope="col" className="py-2 pr-4 font-semibold text-muted">{h}</th>)}</tr></thead>
-        <tbody>
-          {t.table.rows.map((r, i) => (
-            <tr key={i} className="border-b border-line last:border-0">
-              {r.map((c, j) => (j === 0 ? <th key={j} scope="row" className="py-2.5 pr-4 font-normal text-muted">{c}</th> : <td key={j} className="py-2.5 pr-4 font-medium">{c}</td>))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
 
 export default function GrammarTopicPage() {
   const { id = '' } = useParams();

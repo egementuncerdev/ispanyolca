@@ -121,10 +121,15 @@ export interface Unit {
   id: string;
   order: number;
   title: string;
-  lessonIds: string[];
+  titleTr: string;
+  /** ünite sonunda neler yapabileceğin (Türkçe, tek cümle) */
+  goal: string;
+  /** yalnız id referansları: içerik kelime, grammar ve okuma dosyalarında durur */
   wordIds: string[];
+  /** dersin konuları (Ders adımı bunların anlatımıdır, Alıştırma bunların soruları) */
   grammarIds: string[];
   readingIds: string[];
+  /** ünite testindeki hazır sorular (grammar ve okuma soru id'leri); kelime soruları üretilir */
   unitTestQuestionIds: string[];
 }
 

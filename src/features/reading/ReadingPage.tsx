@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useParams, useSearchParams } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, ArrowRight, Check, Languages, Plus } from 'lucide-react';
 import { READINGS, READING_BY_ID, KIND_LABEL } from '@/content/readings';
@@ -15,6 +15,7 @@ import { saveResult } from '@/lib/games/record';
 import { repos } from '@/lib/storage';
 import { useSettings } from '@/app/settings';
 import { useWordData } from '@/features/words/useWordData';
+import { UNIT_BY_ID } from '@/content/course/units';
 import { WordPopover, type PopoverEntry } from './WordPopover';
 
 export default function ReadingPage() {
@@ -22,6 +23,8 @@ export default function ReadingPage() {
   const r = READING_BY_ID[id];
   const { settings } = useSettings();
   const data = useWordData();
+  const [params] = useSearchParams();
+  const unit = UNIT_BY_ID[params.get('unite') ?? ''];
   const [showTr, setShowTr] = useState(false);
   const [active, setActive] = useState<{ key: string; entry: PopoverEntry; el: HTMLElement } | null>(null);
   const [runKey, setRunKey] = useState(0);
@@ -43,7 +46,7 @@ export default function ReadingPage() {
 
   return (
     <>
-      <Link to="/okuma" className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted hover:text-ink"><ArrowLeft className="size-4" strokeWidth={1.75} /> Okuma</Link>
+      <Link to={unit ? `/kurs/${unit.id}/okuma` : '/okuma'} className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted hover:text-ink"><ArrowLeft className="size-4" strokeWidth={1.75} /> {unit ? `Ünite ${unit.order}: ${unit.title}` : 'Okuma'}</Link>
 
       <header className="mb-8 border-b border-line pb-6">
         <p className="eyebrow mb-2">{KIND_LABEL[r.kind]} · {r.level} · {TOPIC_LABEL[r.topic]} · {minutes} dk</p>
@@ -120,6 +123,7 @@ export default function ReadingPage() {
         <QuestionRunner key={`${id}-${runKey}`} questions={r.questions} strictAccents={settings.strictAccents} compact
           onFinish={(res) => void saveResult(repos, settings, 'reading', r.id, res.correct, res.total)}
           doneLabel="Baştan çöz" onDone={() => setRunKey((k) => k + 1)} />
+        {unit && <div className="mt-4"><Link to={`/kurs/${unit.id}/okuma`} className="text-sm text-accent-ink underline decoration-line-2 underline-offset-4 hover:decoration-accent">Üniteye dön</Link></div>}
       </section>
 
       <nav aria-label="Diğer metinler" className="mt-12 grid gap-3 border-t border-line pt-6 sm:grid-cols-2">

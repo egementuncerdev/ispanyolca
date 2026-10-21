@@ -23,7 +23,8 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: '/', element: page(() => import('@/features/dashboard/DashboardPage')) },
-      { path: '/kurs', element: soon('/kurs', 'A1 Kursu', '8 üniteli A1 kursu: her ünitede ders, kelimeler, alıştırma, quiz, okuma ve ünite testi.') },
+      { path: '/kurs', element: page(() => import('@/features/course/CoursePage')) },
+      { path: '/kurs/:unitId/:step?', element: page(() => import('@/features/course/UnitPage')) },
       { path: '/kelimeler', element: page(() => import('@/features/words/WordsPage')) },
       { path: '/kelimeler/:id', element: page(() => import('@/features/words/WordDetailPage')) },
       { path: '/calis', element: page(() => import('@/features/flashcards/StudyPage')) },
