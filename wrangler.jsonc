@@ -1,0 +1,13 @@
+// Cloudflare Workers (static assets) — deploy: npm run deploy
+// SPA: bilinmeyen yollar index.html'e düşer (React Router halleder).
+{
+  "name": "ispanyolca",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [{ "pattern": "ispanyolca.egementuncer.dev", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false
+}
