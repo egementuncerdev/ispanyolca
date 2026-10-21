@@ -5,11 +5,12 @@ import { dayKey } from '@/lib/time/dayKey';
 import { answer, introduce } from '@/lib/srs/study';
 import { WORD_BY_ID } from '@/content/vocabulary';
 
-export async function saveResult(repos: Repos, s: Settings, kind: 'quiz' | 'game', sourceId: string, correct: number, total: number, wrongIds: string[] = []) {
+export async function saveResult(repos: Repos, s: Settings, kind: 'quiz' | 'game' | 'reading', sourceId: string, correct: number, total: number, wrongIds: string[] = []) {
   const now = new Date();
   const dk = dayKey(now, s.timezone, s.dayStartsAt);
   await repos.quizResults.add({ kind, sourceId, correct, total, wrongIds, finishedAt: now.toISOString(), dayKey: dk });
-  await repos.events.add({ type: kind === 'quiz' ? 'quiz_done' : 'game', refId: sourceId, value: kind === 'quiz' ? Math.round((correct / Math.max(1, total)) * 100) : correct, at: now.toISOString(), dayKey: dk });
+  const type = { quiz: 'quiz_done', game: 'game', reading: 'reading_done' }[kind];
+  await repos.events.add({ type, refId: sourceId, value: kind === 'game' ? correct : Math.round((correct / Math.max(1, total)) * 100), at: now.toISOString(), dayKey: dk });
 }
 
 /** Yanlış yapılan kelimeler: kartı varsa Unuttum ile tekrarlanır, yoksa kartlara eklenir */

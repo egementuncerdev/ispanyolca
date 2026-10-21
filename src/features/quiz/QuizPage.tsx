@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/Button';
@@ -56,7 +57,7 @@ export default function QuizPage() {
               <span className="text-sm text-muted">{c.desc}</span>
             </label>
           ))}
-          <div className="rounded-xl border border-dashed border-line p-4 text-muted"><span className="display block text-xl">Okuma</span><span className="text-sm">Okuma bölümüyle gelecek</span></div>
+          <Link to="/okuma" className="rounded-xl border border-dashed border-line-2 p-4 transition-colors hover:border-ink-2"><span className="display block text-xl">Okuma</span><span className="text-sm text-muted">Metni oku, sonundaki soruları çöz →</span></Link>
         </div>
       </fieldset>
       <fieldset className="mb-6">

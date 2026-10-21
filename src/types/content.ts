@@ -102,11 +102,18 @@ export interface GrammarTopic {
 export interface Reading {
   id: string;
   level: Level;
+  /** kelime konusu id'si (TOPICS) */
   topic: string;
+  kind: 'text' | 'story';
   title: string;
-  text: string;
-  /** metindeki biçim (küçük harf) → wordId */
-  glossary: Record<string, string>;
+  titleTr: string;
+  /** paragraflar; her birinin Türkçesi yanında */
+  paragraphs: { es: string; tr: string }[];
+  /** metindeki biçim (küçük harf) → kelime id'si ya da "x:" ile ek sözlük anahtarı.
+      Yalnız çok anlamlı (mañana, tarde) ya da otomatik bulunamayan biçimler için. */
+  glossary?: Record<string, string>;
+  /** metindeki özel adlar (Lucía, Madrid) */
+  names?: string[];
   questions: Question[];
 }
 

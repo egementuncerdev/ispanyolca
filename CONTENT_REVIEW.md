@@ -1010,3 +1010,530 @@ Plan ve yakın gelecek için ir fiilinin çekimi + a + mastar kullanılır: Voy 
 | translate_tr_es | Ne yapacaksın? | ¿Qué vas a hacer? |
 | translate_es_tr | No vamos a trabajar el domingo. | Pazar günü çalışmayacağız. (şıklar: Pazar günü çalışıyoruz., Pazar günü çalışmak istemiyoruz.) |
 
+# Okumalar
+
+## ¡Hola, soy Lucía! — Merhaba, ben Lucía! (metin)
+
+> ¡Hola! Me llamo Lucía y soy de Sevilla. Tengo veinte años y soy estudiante. Estudio en la universidad de Madrid.
+>
+> *Merhaba! Benim adım Lucía, Sevillalıyım. Yirmi yaşındayım ve öğrenciyim. Madrid’de üniversitede okuyorum.*
+
+> Vivo en un piso pequeño con dos amigas, Marta y Carmen. Marta es muy simpática y Carmen es muy divertida.
+>
+> *İki kız arkadaşımla, Marta ve Carmen’le küçük bir dairede yaşıyorum. Marta çok cana yakın, Carmen de çok eğlenceli.*
+
+> Hablo español e inglés. Ahora aprendo turco porque tengo un amigo de Estambul. ¡Encantada!
+>
+> *İspanyolca ve İngilizce konuşuyorum. Şimdi Türkçe öğreniyorum, çünkü İstanbullu bir arkadaşım var. Memnun oldum!*
+
+| Soru | Doğru cevap |
+|---|---|
+| Lucía nereli? | Sevilla |
+| Lucía kaç yaşında? | 20 |
+| Lucía kiminle yaşıyor? | İki kız arkadaşıyla |
+| Marta es muy ___. (cana yakın) | simpática |
+| Ahora aprendo turco. | Şimdi Türkçe öğreniyorum. |
+
+## Mi familia — Ailem (metin)
+
+> Me llamo Pablo y tengo treinta años. Mi familia no es muy grande: mi madre, mi padre, mi hermana Ana y yo.
+>
+> *Benim adım Pablo, otuz yaşındayım. Ailem çok büyük değil: annem, babam, kız kardeşim Ana ve ben.*
+
+> Mi padre se llama Luis. Es médico y trabaja en un hospital. Mi madre se llama Elena y es profesora en una escuela.
+>
+> *Babamın adı Luis. Doktor ve bir hastanede çalışıyor. Annemin adı Elena, bir okulda öğretmen.*
+
+> Ana tiene dieciocho años y es estudiante. Es alta, inteligente y muy simpática.
+>
+> *Ana on sekiz yaşında ve öğrenci. Uzun boylu, zeki ve çok cana yakın.*
+
+> Mis abuelos viven en Valencia, cerca de la playa. Los domingos comemos todos juntos en su casa.
+>
+> *Dedemle ninem Valencia’da, plaja yakın yaşıyor. Pazar günleri hep birlikte onların evinde yemek yiyoruz.*
+
+| Soru | Doğru cevap |
+|---|---|
+| Pablo’nun babası ne iş yapıyor? | Doktor |
+| Elena nerede çalışıyor? | Bir okulda |
+| Ana kaç yaşında? | 18 |
+| Pazar günleri ne yapıyorlar? | Dedeyle ninenin evinde yemek yiyorlar |
+| Mi padre ___ médico. (olmak) | es |
+
+## Mi piso — Dairem (metin)
+
+> Vivo en un piso en un barrio bonito de Madrid. El piso no es grande, pero es nuevo y muy limpio.
+>
+> *Madrid’in güzel bir semtinde, bir dairede yaşıyorum. Daire büyük değil ama yeni ve çok temiz.*
+
+> Tiene un salón, una cocina, un baño y dos dormitorios. En el salón hay un sofá azul, una mesa y cuatro sillas.
+>
+> *Bir oturma odası, bir mutfak, bir banyo ve iki yatak odası var. Oturma odasında mavi bir kanepe, bir masa ve dört sandalye var.*
+
+> Mi dormitorio es pequeño. Tiene una cama, un armario y una ventana grande. Desde la ventana veo el parque.
+>
+> *Yatak odam küçük. Bir yatak, bir dolap ve büyük bir pencere var. Pencereden parkı görüyorum.*
+
+> Me gusta mucho la cocina porque es grande y tiene una nevera nueva. Allí cocino con mi novio el fin de semana.
+>
+> *Mutfağı çok seviyorum, çünkü büyük ve yeni bir buzdolabı var. Hafta sonu orada sevgilimle yemek yapıyorum.*
+
+Anlam seçimi: cocina → cocina
+
+| Soru | Doğru cevap |
+|---|---|
+| Daire nasıl? | Yeni ve çok temiz |
+| Oturma odasında kaç sandalye var? | 4 |
+| Kanepe ne renk? | Mavi |
+| Pencereden ne görünüyor? | Park |
+| En el salón ___ un sofá azul. (var) | hay |
+
+## En el bar — Barda (metin)
+
+> Es sábado por la mañana. Javier y Marta están en un bar pequeño cerca de la plaza.
+>
+> *Cumartesi sabahı. Javier ve Marta meydana yakın küçük bir barda.*
+
+> —Buenos días. ¿Qué queréis tomar? —dice el camarero.
+>
+> *“Günaydın. Ne alırsınız?” diyor garson.*
+
+> —Para mí, un café con leche y pan con tomate, por favor —dice Marta.
+>
+> *“Bana sütlü bir kahve ve domatesli ekmek, lütfen” diyor Marta.*
+
+> —Yo quiero un zumo de naranja y una tortilla —dice Javier.
+>
+> *“Ben bir portakal suyu ve bir İspanyol omleti istiyorum” diyor Javier.*
+
+> Todo está delicioso. Después, Javier pide la cuenta. Son nueve euros.
+>
+> *Her şey çok lezzetli. Sonra Javier hesabı istiyor. Dokuz euro tutuyor.*
+
+Anlam seçimi: mañana → manana-sabah, naranja → naranja-meyve
+
+| Soru | Doğru cevap |
+|---|---|
+| Hangi gün? | Cumartesi |
+| Marta ne içiyor? | Sütlü kahve |
+| Javier ne yiyor? | İspanyol omleti |
+| Hesap ne kadar? | 9 euro |
+| Hesap, lütfen. | La cuenta, por favor. |
+
+## Un día normal — Sıradan bir gün (metin)
+
+> Me llamo Carmen y soy enfermera. Trabajo en un hospital grande de Valencia.
+>
+> *Benim adım Carmen, hemşireyim. Valencia’da büyük bir hastanede çalışıyorum.*
+
+> Me despierto a las seis de la mañana. Me levanto y me ducho. Mi desayuno es un café y una fruta.
+>
+> *Sabah altıda uyanıyorum. Kalkıyorum ve duş alıyorum. Kahvaltım bir kahve ve bir meyve.*
+
+> Voy al hospital en autobús. Empiezo a trabajar a las siete y media.
+>
+> *Hastaneye otobüsle gidiyorum. Yedi buçukta çalışmaya başlıyorum.*
+
+> A las tres vuelvo a casa. Como con mi marido y después dormimos un poco.
+>
+> *Saat üçte eve dönüyorum. Kocamla yemek yiyorum, sonra biraz uyuyoruz.*
+
+> Por la tarde leo un libro o miro el móvil. La cena es a las nueve y me acuesto temprano, a las once.
+>
+> *Öğleden sonra kitap okuyorum ya da telefonuma bakıyorum. Akşam yemeği saat dokuzda; erken, on birde yatıyorum.*
+
+Anlam seçimi: trabajo → trabajar, mañana → manana-sabah, como → comer, tarde → tarde-ogleden-sonra
+
+| Soru | Doğru cevap |
+|---|---|
+| Carmen ne iş yapıyor? | Hemşire |
+| Carmen kaçta uyanıyor? | 6:00 |
+| Hastaneye nasıl gidiyor? | Otobüsle |
+| Me ___ temprano. (yatmak) | acuesto |
+| (sıralama) | Empiezo a trabajar a las siete. |
+
+## Mi barrio — Semtim (metin)
+
+> Vivo en el barrio de Triana, en Sevilla. Es un barrio viejo y muy bonito.
+>
+> *Sevilla’da, Triana semtinde yaşıyorum. Eski ve çok güzel bir semt.*
+
+> En mi calle hay una farmacia, un supermercado y dos bares. Los bares están abiertos hasta la una.
+>
+> *Sokağımda bir eczane, bir süpermarket ve iki bar var. Barlar gece saat bire kadar açık.*
+
+> Cerca de mi casa hay una plaza grande con una iglesia. Los niños juegan en la plaza por la tarde.
+>
+> *Evimin yakınında, kilisesi olan büyük bir meydan var. Çocuklar öğleden sonraları meydanda oynuyor.*
+
+> No tengo coche. Voy a la oficina en metro o en bicicleta. La estación de metro está muy cerca.
+>
+> *Arabam yok. Ofise metroyla ya da bisikletle gidiyorum. Metro istasyonu çok yakın.*
+
+> Me gusta mucho mi barrio porque la gente es muy amable.
+>
+> *Semtimi çok seviyorum, çünkü insanlar çok nazik.*
+
+Anlam seçimi: tarde → tarde-ogleden-sonra
+
+| Soru | Doğru cevap |
+|---|---|
+| Triana hangi şehirde? | Sevilla |
+| Sokakta kaç bar var? | 2 |
+| Çocuklar nerede oynuyor? | Meydanda |
+| Ofise nasıl gidiyor? | Metroyla ya da bisikletle |
+| En mi calle ___ una farmacia. (var) | hay |
+
+## La semana de Diego — Diego’nun haftası (metin)
+
+> Diego es programador y trabaja en una empresa pequeña. Tiene una semana muy ocupada.
+>
+> *Diego yazılımcı ve küçük bir şirkette çalışıyor. Çok yoğun bir haftası var.*
+
+> Los lunes y los miércoles trabaja en la oficina. Los martes y los jueves trabaja en casa, con su ordenador.
+>
+> *Pazartesi ve çarşamba günleri ofiste çalışıyor. Salı ve perşembe günleri evde, bilgisayarıyla çalışıyor.*
+
+> Los viernes por la tarde juega al fútbol con sus amigos.
+>
+> *Cuma öğleden sonraları arkadaşlarıyla futbol oynuyor.*
+
+> El fin de semana no trabaja. El sábado va al mercado y cocina para su familia. El domingo duerme mucho y lee.
+>
+> *Hafta sonu çalışmıyor. Cumartesi pazara gidip ailesi için yemek yapıyor. Pazar günü bol bol uyuyor ve okuyor.*
+
+> En agosto Diego no trabaja: va a la playa con su novia.
+>
+> *Ağustosta Diego çalışmıyor: kız arkadaşıyla plaja gidiyor.*
+
+Anlam seçimi: tarde → tarde-ogleden-sonra, cocina → cocinar
+
+| Soru | Doğru cevap |
+|---|---|
+| Diego salı günleri nerede çalışıyor? | Evde |
+| Cuma öğleden sonraları ne yapıyor? | Futbol oynuyor |
+| Ağustosta nereye gidiyor? | Plaja |
+| El domingo Diego ___ mucho. (uyumak) | duerme |
+| El fin de semana no trabaja. | Hafta sonu çalışmıyor. |
+
+## En la tienda de ropa — Giyim mağazasında (metin)
+
+> Lucía necesita ropa nueva para el trabajo. Hoy va a una tienda de ropa con su hermana.
+>
+> *Lucía’nın iş için yeni kıyafetlere ihtiyacı var. Bugün kız kardeşiyle bir giyim mağazasına gidiyor.*
+
+> —¿Te gusta esta camisa azul? —No, prefiero la blanca.
+>
+> *“Bu mavi gömleği beğendin mi?” “Hayır, beyazı tercih ederim.”*
+
+> La camisa blanca es bonita y no es cara: cuesta veinte euros.
+>
+> *Beyaz gömlek güzel ve pahalı değil: yirmi euro.*
+
+> También necesita una chaqueta. Hay una chaqueta negra muy bonita, pero es muy cara: cuesta cien euros.
+>
+> *Bir de ceket lazım. Çok güzel siyah bir ceket var ama çok pahalı: yüz euro.*
+
+> Al final, Lucía compra la camisa blanca y una chaqueta gris más barata. Está muy contenta.
+>
+> *Sonunda Lucía beyaz gömleği ve daha ucuz, gri bir ceket alıyor. Çok memnun.*
+
+Anlam seçimi: trabajo → trabajo
+
+| Soru | Doğru cevap |
+|---|---|
+| Lucía neden mağazaya gidiyor? | İş için yeni kıyafet lazım |
+| Hangi gömleği tercih ediyor? | Beyaz |
+| Siyah ceket ne kadar? | 100 euro |
+| Sonunda hangi ceketi alıyor? | Gri |
+| La chaqueta negra es muy ___. (pahalı) | cara |
+
+## El nuevo trabajo — Yeni iş (metin)
+
+> Javier es ingeniero y hoy empieza en un trabajo nuevo. Está muy contento.
+>
+> *Javier mühendis ve bugün yeni bir işe başlıyor. Çok mutlu.*
+
+> La oficina está cerca de la estación de tren. Javier llega temprano, a las ocho y media.
+>
+> *Ofis tren istasyonuna yakın. Javier erken, sekiz buçukta varıyor.*
+
+> Sus compañeros son muy simpáticos. Ana es arquitecta y Pedro es programador.
+>
+> *İş arkadaşları çok cana yakın. Ana mimar, Pedro yazılımcı.*
+
+> A las dos comen juntos en un restaurante barato. Javier pide pescado con ensalada y agua.
+>
+> *Saat ikide birlikte ucuz bir restoranda yemek yiyorlar. Javier salatalı balık ve su istiyor.*
+
+> Por la tarde aprende mucho. A las seis vuelve a casa en tren. ¡Es un buen día!
+>
+> *Öğleden sonra çok şey öğreniyor. Saat altıda trenle eve dönüyor. Güzel bir gün!*
+
+Anlam seçimi: trabajo → trabajo, tarde → tarde-ogleden-sonra, buen → bueno
+
+| Soru | Doğru cevap |
+|---|---|
+| Javier ne iş yapıyor? | Mühendis |
+| Ofis nerede? | Tren istasyonunun yakınında |
+| Ana ne iş yapıyor? | Mimar |
+| Öğle yemeğinde Javier ne istiyor? | Salatalı balık |
+| Javier ___ temprano, a las ocho y media. (varmak) | llega |
+
+## Mis amigos — Arkadaşlarım (metin)
+
+> Tengo tres amigos: Marta, Diego y Carmen. Somos amigos desde la escuela.
+>
+> *Üç arkadaşım var: Marta, Diego ve Carmen. Okuldan beri arkadaşız.*
+
+> A Marta le gusta leer. Siempre lee en el metro y en la cama.
+>
+> *Marta okumayı sever. Metroda da yatakta da hep okur.*
+
+> A Diego le gusta viajar. Este año va a viajar a Italia.
+>
+> *Diego seyahat etmeyi sever. Bu yıl İtalya’ya gidecek.*
+
+> A Carmen le gustan mucho los perros: tiene dos perros y un gato.
+>
+> *Carmen köpekleri çok sever: iki köpeği ve bir kedisi var.*
+
+> ¿Y a mí? A mí me gusta cocinar. Los sábados cocino para mis amigos y comemos juntos en mi casa.
+>
+> *Ya ben? Ben yemek yapmayı severim. Cumartesileri arkadaşlarıma yemek yapıyorum, evimde birlikte yiyoruz.*
+
+| Soru | Doğru cevap |
+|---|---|
+| Marta neyi sever? | Okumayı |
+| Diego bu yıl nereye gidecek? | İtalya |
+| Carmen’in kaç köpeği var? | 2 |
+| A Carmen le ___ mucho los perros. | gustan |
+| Yazar cumartesileri ne yapıyor? | Arkadaşlarına yemek yapıyor |
+
+## ¿Dónde está la llave? — Anahtar nerede? (hikâye)
+
+> Son las ocho de la mañana. Pablo necesita salir de casa ahora, porque empieza a trabajar a las nueve.
+>
+> *Sabahın sekizi. Pablo’nun hemen evden çıkması gerekiyor, çünkü saat dokuzda işe başlıyor.*
+
+> Pero hay un problema: no encuentra la llave.
+>
+> *Ama bir sorun var: anahtarı bulamıyor.*
+
+> Mira en la mesa del salón: no está. Mira en la cocina y en el baño: no está.
+>
+> *Oturma odasındaki masaya bakıyor: yok. Mutfağa ve banyoya bakıyor: yok.*
+
+> Mira en el dormitorio, en la cama y en el armario. ¡Nada!
+>
+> *Yatak odasına, yatağa ve dolaba bakıyor. Hiçbir şey!*
+
+> Pablo habla por teléfono con su madre: —Mamá, no encuentro la llave de casa.
+>
+> *Pablo annesiyle telefonda konuşuyor: “Anne, evin anahtarını bulamıyorum.”*
+
+> —¿Y tu chaqueta? —dice su madre—. Siempre pones la llave en la chaqueta.
+>
+> *“Ya ceketin?” diyor annesi. “Anahtarı hep ceketine koyuyorsun.”*
+
+> Pablo mira en la chaqueta… ¡y allí está la llave! —Gracias, mamá. ¡Hasta luego!
+>
+> *Pablo cekete bakıyor… ve anahtar orada! “Teşekkürler anne. Görüşürüz!”*
+
+Anlam seçimi: mañana → manana-sabah, cocina → cocina
+
+| Soru | Doğru cevap |
+|---|---|
+| Pablo kaçta işe başlıyor? | 9:00 |
+| Pablo neyi bulamıyor? | Anahtarını |
+| Pablo kiminle konuşuyor? | Annesiyle |
+| Anahtar nerede? | Ceketinde |
+| No ___ la llave. (bulmak, yo) | encuentro |
+
+## Un café en Madrid — Madrid’de bir kahve (hikâye)
+
+> Emre es de Estambul. Ahora está en Madrid de vacaciones y quiere aprender español.
+>
+> *Emre İstanbullu. Şimdi tatil için Madrid’de ve İspanyolca öğrenmek istiyor.*
+
+> Una tarde, Emre está en un bar cerca de un museo. Hay mucha gente y no hay mesas libres.
+>
+> *Bir öğleden sonra Emre bir müzenin yakınındaki bir barda. Çok kalabalık ve boş masa yok.*
+
+> Una mujer joven está en una mesa con un libro. Emre dice: —Perdón, ¿está libre esta silla?
+>
+> *Genç bir kadın elinde kitabıyla bir masada oturuyor. Emre soruyor: “Affedersiniz, bu sandalye boş mu?”*
+
+> —Sí, claro —dice ella—. Me llamo Elena. ¿Y tú? —Me llamo Emre. Soy turco.
+>
+> *“Evet, tabii” diyor kadın. “Benim adım Elena. Ya senin?” “Benim adım Emre. Türk’üm.”*
+
+> —¡Encantada! ¿Hablas español? —Un poco. Estudio todos los días.
+>
+> *“Memnun oldum! İspanyolca konuşuyor musun?” “Biraz. Her gün çalışıyorum.”*
+
+> Elena es profesora de español. Hablan una hora y Emre aprende muchas palabras nuevas.
+>
+> *Elena İspanyolca öğretmeni. Bir saat konuşuyorlar ve Emre birçok yeni kelime öğreniyor.*
+
+> Al final, Elena dice: —Mañana estoy aquí otra vez. ¿Un café a las cinco? —¡Sí, hasta mañana!
+>
+> *Sonunda Elena diyor ki: “Yarın yine buradayım. Saat beşte bir kahve?” “Evet, yarın görüşürüz!”*
+
+Anlam seçimi: tarde → tarde-ogleden-sonra, mañana → manana-yarin
+
+| Soru | Doğru cevap |
+|---|---|
+| Emre nereli? | İstanbul |
+| Emre neden Madrid’de? | Tatil için |
+| Elena ne iş yapıyor? | İspanyolca öğretmeni |
+| Ertesi gün kaçta buluşuyorlar? | 5:00 |
+| Bu sandalye boş mu? | ¿Está libre esta silla? · ¿Esta silla está libre? |
+
+## El cumpleaños de la abuela — Ninenin doğum günü (hikâye)
+
+> Hoy es domingo y es el cumpleaños de la abuela Carmen. Tiene ochenta años.
+>
+> *Bugün pazar ve Carmen ninenin doğum günü. Seksen yaşında.*
+
+> Toda la familia va a su casa: sus hijos, sus nietos y sus amigos.
+>
+> *Bütün aile onun evine gidiyor: çocukları, torunları ve arkadaşları.*
+
+> La tía Isabel cocina una paella grande. El tío Luis trae vino y pan.
+>
+> *Isabel teyze büyük bir paella pişiriyor. Luis amca şarap ve ekmek getiriyor.*
+
+> Los nietos compran un helado de chocolate y fresa.
+>
+> *Torunlar çikolatalı ve çilekli bir dondurma alıyor.*
+
+> A las dos, la abuela abre la puerta. —¡Feliz cumpleaños! —dicen todos.
+>
+> *Saat ikide nine kapıyı açıyor. “İyi ki doğdun!” diyor herkes.*
+
+> La abuela está muy contenta. Comen, beben y hablan mucho. Es un día muy bonito.
+>
+> *Nine çok mutlu. Yiyorlar, içiyorlar ve bol bol konuşuyorlar. Çok güzel bir gün.*
+
+> Por la noche, la abuela dice: —Estoy cansada, pero muy feliz. ¡Gracias a todos!
+>
+> *Akşam nine diyor ki: “Yorgunum ama çok mutluyum. Hepinize teşekkürler!”*
+
+Anlam seçimi: cocina → cocinar
+
+| Soru | Doğru cevap |
+|---|---|
+| Nine kaç yaşında? | 80 |
+| Isabel teyze ne pişiriyor? | Paella |
+| Luis amca ne getiriyor? | Şarap ve ekmek |
+| Torunlar ne alıyor? | Dondurma |
+| La abuela ___ muy contenta. (olmak, durum) | está |
+
+## Ek sözlük (kart olmayan kelimeler)
+
+| Biçim | Tür | Türkçe | Not |
+|---|---|---|---|
+| el | artikel | belirli artikel | eril tekil: el libro |
+| la | artikel | belirli artikel | dişil tekil: la casa; saatte: a la una |
+| los | artikel | belirli artikel | eril çoğul: los libros; günlerde: los lunes = pazartesileri |
+| las | artikel | belirli artikel | dişil çoğul: las casas; saatte: a las siete |
+| un | artikel | bir | eril: un libro |
+| una | artikel | bir | dişil: una casa; saatte: la una = saat bir |
+| unos | artikel | birkaç | eril çoğul |
+| unas | artikel | birkaç | dişil çoğul |
+| a | edat | -e, -a; saatte -de | Voy a Madrid. A las seis. |
+| al | edat | -e (a + el) | Voy al parque. |
+| de | edat | -in; -den; -li | la casa de Ana · Soy de Sevilla. |
+| del | edat | -in; -den (de + el) | la mesa del salón |
+| en | edat | -de, içinde; ile (taşıt) | en casa · en autobús |
+| con | edat | ile |  |
+| para | edat | için |  |
+| por | edat | boyunca; ile; için | por la mañana = sabahleyin · por teléfono = telefonda |
+| desde | edat | -den; -den beri |  |
+| hasta | edat | -e kadar |  |
+| cerca | edat | yakın | cerca de = -in yakınında |
+| y | bağlaç | ve |  |
+| e | bağlaç | ve | i- sesiyle başlayan kelimeden önce: español e inglés |
+| o | bağlaç | veya, ya da |  |
+| pero | bağlaç | ama |  |
+| porque | bağlaç | çünkü |  |
+| que | bağlaç | ki; -en, -an |  |
+| como | bağlaç | gibi; olarak |  |
+| qué | soru kelimesi | ne |  |
+| dónde | soru kelimesi | nerede |  |
+| cómo | soru kelimesi | nasıl |  |
+| cuándo | soru kelimesi | ne zaman |  |
+| quién | soru kelimesi | kim |  |
+| yo | zamir | ben |  |
+| tú | zamir | sen |  |
+| él | zamir | o (erkek) |  |
+| ella | zamir | o (kadın) |  |
+| usted | zamir | siz (resmî) |  |
+| nosotros | zamir | biz |  |
+| vosotros | zamir | siz |  |
+| ellos | zamir | onlar |  |
+| ellas | zamir | onlar (kadın) |  |
+| mí | zamir | ben | edattan sonra: para mí = benim için |
+| me | zamir | bana, beni; kendimi | me llamo, me gusta |
+| te | zamir | sana, seni; kendini | te gusta |
+| se | zamir | kendini (dönüşlü) | se llama |
+| nos | zamir | bize, bizi |  |
+| os | zamir | size, sizi |  |
+| le | zamir | ona | le gusta |
+| les | zamir | onlara | les gusta |
+| todo | zamir | her şey; bütün |  |
+| todos | zamir | herkes; hepsi, bütün |  |
+| toda | zamir | bütün |  |
+| nada | zamir | hiçbir şey |  |
+| mi | iyelik | benim |  |
+| mis | iyelik | benim (çoğul) |  |
+| tu | iyelik | senin |  |
+| tus | iyelik | senin (çoğul) |  |
+| su | iyelik | onun; onların; sizin |  |
+| sus | iyelik | onun; onların (çoğul) |  |
+| nuestro | iyelik | bizim |  |
+| nuestra | iyelik | bizim |  |
+| este | işaret | bu |  |
+| esta | işaret | bu |  |
+| estos | işaret | bunlar |  |
+| estas | işaret | bunlar |  |
+| muy | zarf | çok (sıfattan önce) |  |
+| mucho | zarf | çok |  |
+| mucha | zarf | çok |  |
+| muchos | zarf | çok, birçok |  |
+| muchas | zarf | çok, birçok |  |
+| poco | zarf | az | un poco = biraz |
+| más | zarf | daha |  |
+| también | zarf | de, da; ayrıca |  |
+| aquí | zarf | burada |  |
+| allí | zarf | orada |  |
+| después | zarf | sonra |  |
+| juntos | zarf | birlikte |  |
+| otra | zarf | başka | otra vez = yine, bir daha |
+| claro | zarf | tabii, elbette |  |
+| sola | zarf | yalnız, tek başına |  |
+| hay | fiil | var | haber fiilinden: Hay una mesa. |
+| gusta | fiil | hoşa gidiyor | gustar, tekil: me gusta el café |
+| gustan | fiil | hoşa gidiyor | gustar, çoğul: me gustan los perros |
+| cuesta | fiil | fiyatı … | costar: cuesta veinte euros |
+| media | isim | buçuk | las siete y media = yedi buçuk |
+| euros | isim | euro |  |
+| gente | isim | insanlar |  |
+| español | isim | İspanyolca; İspanyol |  |
+| inglés | isim | İngilizce |  |
+| turco | isim | Türkçe; Türk |  |
+| fútbol | isim | futbol |  |
+| camisa | isim | gömlek |  |
+| chaqueta | isim | ceket |  |
+| final | isim | son | al final = sonunda |
+| problema | isim | sorun |  |
+| mamá | isim | anne (hitap) |  |
+| vacaciones | isim | tatil | de vacaciones = tatilde |
+| palabras | isim | kelimeler |  |
+| vez | isim | kez | otra vez = yine |
+| compañeros | isim | iş arkadaşları |  |
+| cumpleaños | isim | doğum günü |  |
+| nietos | isim | torunlar |  |
+| paella | isim | paella (pirinç yemeği) |  |
+

@@ -5,6 +5,8 @@ import { TOPICS, WORDS, isVerb } from '../vocabulary';
 import { withArticle } from '../vocabulary/helpers';
 import { PERSONS } from '../verbs/conjugate';
 import { GRAMMAR } from '../grammar';
+import { READINGS } from '../readings';
+import { EXTRA } from '../readings/extra';
 
 it.runIf(process.env.REVIEW)('içerik listesi', () => {
   const out = ['# İçerik kontrol listesi', '', `${WORDS.length} kelime. Yanlış ya da doğal olmayan bir şey görürsen not et.`, ''];
@@ -25,5 +27,17 @@ it.runIf(process.env.REVIEW)('içerik listesi', () => {
     for (const q of [...t.check, ...t.questions]) out.push(`| ${q.type} | ${q.type === 'word_order' ? '(sıralama)' : q.prompt.replace(/\|/g, '/')} | ${q.answers.join(' · ')}${q.options ? ` (şıklar: ${q.options.slice(1).join(', ')})` : ''} |`);
     out.push('');
   }
+  out.push('# Okumalar', '');
+  for (const r of READINGS) {
+    out.push(`## ${r.title} — ${r.titleTr} (${r.kind === 'story' ? 'hikâye' : 'metin'})`, '');
+    for (const p of r.paragraphs) out.push(`> ${p.es}`, '>', `> *${p.tr}*`, '');
+    if (r.glossary) out.push(`Anlam seçimi: ${Object.entries(r.glossary).map(([f, id]) => `${f} → ${id}`).join(', ')}`, '');
+    out.push('| Soru | Doğru cevap |', '|---|---|');
+    for (const q of r.questions) out.push(`| ${q.type === 'word_order' ? '(sıralama)' : q.prompt.replace(/\|/g, '/')} | ${q.answers.join(' · ')} |`);
+    out.push('');
+  }
+  out.push('## Ek sözlük (kart olmayan kelimeler)', '', '| Biçim | Tür | Türkçe | Not |', '|---|---|---|---|');
+  for (const [k, e] of Object.entries(EXTRA)) out.push(`| ${k} | ${e.kind} | ${e.tr} | ${e.note ?? ''} |`);
+  out.push('');
   writeFileSync('CONTENT_REVIEW.md', out.join('\n') + '\n');
 });
