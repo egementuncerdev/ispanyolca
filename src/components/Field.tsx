@@ -6,11 +6,11 @@ export function Field({ id, label, hint, children }: { id: string; label: string
     <div className="grid gap-1.5 sm:grid-cols-[1fr_minmax(0,16rem)] sm:items-center sm:gap-6">
       <div>
         <label htmlFor={id} className="font-medium">{label}</label>
-        {hint && <p id={`${id}-hint`} className="text-sm text-slate-500 dark:text-slate-400">{hint}</p>}
+        {hint && <p id={`${id}-hint`} className="text-sm text-muted">{hint}</p>}
       </div>
       <div>{children}</div>
     </div>
   );
 }
 
-export const inputClass = 'h-11 w-full rounded-xl border border-slate-300 bg-white px-3 text-sm shadow-sm transition-colors focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/30 dark:border-slate-700 dark:bg-slate-900';
+export const inputClass = 'h-11 w-full rounded-lg border border-line-2 bg-surface px-3 text-[15px] text-ink transition-colors focus:border-accent focus:outline-none focus:ring-3 focus:ring-accent/20';

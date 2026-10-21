@@ -16,8 +16,8 @@ const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2'];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <Card className="mb-5">
-      <h2 className="mb-5 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">{title}</h2>
+    <Card className="mb-5 sm:p-7">
+      <h2 className="eyebrow mb-6">{title}</h2>
       <div className="grid gap-6">{children}</div>
     </Card>
   );
@@ -79,7 +79,7 @@ export default function SettingsPage() {
 
   return (
     <>
-      <PageHeader title="Ayarlar" subtitle="Değişiklikler otomatik kaydedilir." actions={<p role="status" className={`text-sm text-emerald-600 transition-opacity dark:text-emerald-400 ${saved ? 'opacity-100' : 'opacity-0'}`}>Kaydedildi</p>} />
+      <PageHeader eyebrow="Tercihler" title="Ayarlar" subtitle="Değişiklikler otomatik kaydedilir." actions={<p role="status" className={`text-sm text-good transition-opacity ${saved ? 'opacity-100' : 'opacity-0'}`}>Kaydedildi</p>} />
 
       <Section title="Görünüm">
         <Field id="theme" label="Tema">
@@ -88,9 +88,9 @@ export default function SettingsPage() {
             value={settings.theme}
             onChange={(theme) => void set({ theme })}
             options={[
-              { value: 'light', label: 'Açık', icon: <Sun className="size-4" aria-hidden="true" /> },
-              { value: 'dark', label: 'Koyu', icon: <Moon className="size-4" aria-hidden="true" /> },
-              { value: 'system', label: 'Sistem', icon: <Monitor className="size-4" aria-hidden="true" /> }
+              { value: 'light', label: 'Açık', icon: <Sun strokeWidth={1.75} className="size-4" aria-hidden="true" /> },
+              { value: 'dark', label: 'Koyu', icon: <Moon strokeWidth={1.75} className="size-4" aria-hidden="true" /> },
+              { value: 'system', label: 'Sistem', icon: <Monitor strokeWidth={1.75} className="size-4" aria-hidden="true" /> }
             ]}
           />
         </Field>
@@ -117,8 +117,8 @@ export default function SettingsPage() {
         <Field id="strict" label="Katı aksan modu" hint="Açıkken eksik aksanlı cevaplar (esta → está) yanlış sayılır.">
           <label className="inline-flex cursor-pointer items-center gap-3">
             <input id="strict" type="checkbox" className="peer sr-only" checked={settings.strictAccents} onChange={(e) => void set({ strictAccents: e.target.checked })} aria-describedby="strict-hint" />
-            <span className="relative h-7 w-12 rounded-full bg-slate-300 transition-colors peer-checked:bg-accent-600 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-500 after:absolute after:left-1 after:top-1 after:size-5 after:rounded-full after:bg-white after:transition-transform peer-checked:after:translate-x-5 dark:bg-slate-700" aria-hidden="true" />
-            <span className="text-sm text-slate-600 dark:text-slate-400">{settings.strictAccents ? 'Açık' : 'Kapalı'}</span>
+            <span className="relative h-7 w-12 rounded-full bg-line-2 transition-colors peer-checked:bg-accent peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent after:absolute after:left-1 after:top-1 after:size-5 after:rounded-full after:bg-surface after:transition-transform peer-checked:after:translate-x-5" aria-hidden="true" />
+            <span className="text-sm text-ink-2">{settings.strictAccents ? 'Açık' : 'Kapalı'}</span>
           </label>
         </Field>
       </Section>
@@ -132,22 +132,22 @@ export default function SettingsPage() {
             {zones.map((z) => <option key={z} value={z}>{z.replace(/_/g, ' ')}</option>)}
           </select>
         </Field>
-        <p className="text-sm text-slate-500 dark:text-slate-400">Şu an sayılan gün: <strong className="font-medium text-slate-700 dark:text-slate-200">{dayKey(new Date(), settings.timezone, settings.dayStartsAt)}</strong></p>
+        <p className="text-sm text-muted">Şu an sayılan gün: <strong className="font-medium text-ink">{dayKey(new Date(), settings.timezone, settings.dayStartsAt)}</strong></p>
       </Section>
 
       <Section title="Veri">
-        <p className="text-sm text-slate-600 dark:text-slate-400">Bütün ilerlemen yalnızca bu tarayıcıda saklanır. Tarayıcı verisi silinirse kaybolur; düzenli yedek almanı öneririm.</p>
+        <p className="text-sm text-ink-2">Bütün ilerlemen yalnızca bu tarayıcıda saklanır. Tarayıcı verisi silinirse kaybolur; düzenli yedek almanı öneririm.</p>
         <div className="flex flex-wrap gap-3">
           <Button variant="secondary" icon={<Download className="size-4" aria-hidden="true" />} onClick={() => void doExport()}>Verimi dışa aktar (JSON)</Button>
           <Button variant="secondary" icon={<Upload className="size-4" aria-hidden="true" />} onClick={() => fileRef.current?.click()}>İçe aktar</Button>
           <input ref={fileRef} type="file" accept="application/json,.json" className="hidden" onChange={(e) => void onFile(e)} aria-label="Yedek dosyası seç" />
         </div>
-        {msg && <p role="status" className={`rounded-xl px-4 py-3 text-sm ${msg.kind === 'ok' ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300' : 'bg-rose-50 text-rose-800 dark:bg-rose-500/10 dark:text-rose-300'}`}>{msg.text}</p>}
+        {msg && <p role="status" className={`rounded-lg px-4 py-3 text-sm ${msg.kind === 'ok' ? 'bg-good-soft text-good' : 'bg-bad-soft text-bad'}`}>{msg.text}</p>}
       </Section>
 
-      <dialog ref={dialogRef} className="m-auto w-[min(92vw,28rem)] rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-2xl backdrop:bg-slate-900/50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100" onClose={() => setPending(null)}>
-        <h2 className="text-lg font-semibold">Yedek geri yüklensin mi?</h2>
-        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Bu tarayıcıdaki mevcut ilerlemen, yedek dosyasındakiyle değiştirilecek. Bu işlem geri alınamaz.</p>
+      <dialog ref={dialogRef} className="m-auto w-[min(92vw,28rem)] rounded-xl border border-line bg-surface p-6 text-ink shadow-2xl backdrop:bg-ink/40" onClose={() => setPending(null)}>
+        <h2 className="display text-2xl">Yedek geri yüklensin mi?</h2>
+        <p className="mt-2 text-sm text-ink-2">Bu tarayıcıdaki mevcut ilerlemen, yedek dosyasındakiyle değiştirilecek. Bu işlem geri alınamaz.</p>
         <div className="mt-6 flex justify-end gap-3">
           <Button variant="ghost" onClick={() => dialogRef.current?.close()}>Vazgeç</Button>
           <Button variant="danger" onClick={() => void confirmImport()}>Evet, geri yükle</Button>

@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
 
-export function PageHeader({ title, subtitle, actions }: { title: string; subtitle?: string; actions?: ReactNode }) {
+export function PageHeader({ eyebrow, title, subtitle, actions }: { eyebrow?: string; title: string; subtitle?: string; actions?: ReactNode }) {
   return (
-    <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
+    <header className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
-        {subtitle && <p className="mt-1 text-slate-600 dark:text-slate-400">{subtitle}</p>}
+        {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
+        <h1 className="display text-[2.1rem] leading-[1.05] sm:text-[2.6rem]">{title}</h1>
+        {subtitle && <p className="mt-2 max-w-xl text-ink-2">{subtitle}</p>}
       </div>
       {actions}
     </header>

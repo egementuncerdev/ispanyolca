@@ -1,16 +1,15 @@
 import type { ReactNode } from 'react';
 
-interface Props { emoji?: string; icon?: ReactNode; title: string; text?: string; action?: ReactNode }
+interface Props { icon?: ReactNode; title: string; text?: string; action?: ReactNode }
 
-/** Boş durum: "Henüz kelime öğrenmedin…" gibi */
-export function EmptyState({ emoji, icon, title, text, action }: Props) {
+/** Boş durum: kısa başlık, açıklama ve tek bir eylem */
+export function EmptyState({ icon, title, text, action }: Props) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border border-dashed border-slate-300 px-6 py-14 text-center dark:border-slate-700">
-      {emoji && <div className="mb-3 text-4xl" aria-hidden="true">{emoji}</div>}
-      {icon && <div className="mb-3 text-slate-400" aria-hidden="true">{icon}</div>}
-      <h2 className="text-lg font-semibold">{title}</h2>
-      {text && <p className="mt-2 max-w-md text-slate-600 dark:text-slate-400">{text}</p>}
-      {action && <div className="mt-5">{action}</div>}
+    <div className="rounded-xl border border-line bg-surface px-6 py-12 sm:px-10">
+      {icon && <div className="mb-5 grid size-11 place-items-center rounded-full border border-line-2 text-accent-ink" aria-hidden="true">{icon}</div>}
+      <h2 className="display text-2xl">{title}</h2>
+      {text && <p className="mt-2 max-w-lg text-ink-2">{text}</p>}
+      {action && <div className="mt-6">{action}</div>}
     </div>
   );
 }
