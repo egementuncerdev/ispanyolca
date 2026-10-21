@@ -17,6 +17,7 @@ import { EmptyState } from '@/components/EmptyState';
 import { inputClass } from '@/components/Field';
 import { dayKey } from '@/lib/time/dayKey';
 import type { CardState } from '@/types/user';
+import type { Word } from '@/types/content';
 
 const SCORES: { s: Score; label: string; key: string }[] = [
   { s: 1, label: 'Unuttum', key: '1' },
@@ -26,12 +27,16 @@ const SCORES: { s: Score; label: string; key: string }[] = [
 ];
 
 type Phase = 'loading' | 'question' | 'revealed' | 'done' | 'empty';
+/** Kuyruk öğesi: bir SRS kartı ya da yeni kelimenin tanıtım ekranı */
+type Item = CardState | { intro: string };
+const isIntro = (i: Item | undefined): i is { intro: string } => !!i && 'intro' in i;
+const BATCH = 5;
 interface Outcome { check?: CheckResult; picked?: string }
 
 export default function StudyPage() {
   const { settings } = useSettings();
   const { focus, setFocus } = useFocusMode();
-  const [queue, setQueue] = useState<CardState[]>([]);
+  const [queue, setQueue] = useState<Item[]>([]);
   const [pos, setPos] = useState(0);
   const [phase, setPhase] = useState<Phase>('loading');
   const [outcome, setOutcome] = useState<Outcome>({});
@@ -48,9 +53,14 @@ export default function StudyPage() {
       const plan = await todayPlan(repos, settings);
       const fresh = await introduce(repos, settings, plan.newWords);
       if (!alive) return;
-      const firstPass = fresh.filter((c) => c.cardType === 'es_tr');
-      const secondPass = fresh.filter((c) => c.cardType === 'tr_es');
-      const q = [...plan.due, ...firstPass, ...secondPass];
+      // Yeni kelimeler 5'erli gruplar: önce tanıtım, sonra o grubun soruları; en sonda TR→ES kartları
+      const es = fresh.filter((c) => c.cardType === 'es_tr');
+      const q: Item[] = [...plan.due];
+      for (let i = 0; i < es.length; i += BATCH) {
+        const group = es.slice(i, i + BATCH);
+        q.push(...group.map((c) => ({ intro: c.wordId })), ...group);
+      }
+      q.push(...fresh.filter((c) => c.cardType === 'tr_es'));
       setStats((s) => ({ ...s, newWords: fresh.length / 2 }));
       setQueue(q);
       setPhase(q.length ? 'question' : 'empty');
@@ -70,7 +80,9 @@ export default function StudyPage() {
   }, [settings]);
   useEffect(() => () => { void logSession(); }, [logSession]);
 
-  const card = queue[pos];
+  const item = queue[pos];
+  const card = isIntro(item) ? undefined : item;
+  const introWord = isIntro(item) ? WORD_BY_ID[item.intro] : undefined;
   const word = card ? WORD_BY_ID[card.wordId] : undefined;
   const prompt: Prompt | null = useMemo(() => (card && word ? buildPrompt(card, word, WORDS) : null), [card, word]);
   const intervals = useMemo(() => (card ? preview(card) : null), [card]);
@@ -91,6 +103,10 @@ export default function StudyPage() {
       q.splice(Math.min(q.length, pos + 4), 0, next);
       setQueue(q);
     }
+    await advance(q);
+  };
+
+  const advance = async (q: Item[] = queue) => {
     if (pos + 1 >= q.length) {
       const all = await repos.cards.all();
       setNextDue(all.map((c) => c.due).sort()[0] ?? null);
@@ -118,6 +134,7 @@ export default function StudyPage() {
     const onKey = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement;
       if (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA') return;
+      if (introWord && (e.key === ' ' || e.key === 'Enter')) { e.preventDefault(); void advance(); return; }
       if (e.key === ' ' && phase === 'question' && prompt?.kind === 'flip') { e.preventDefault(); reveal(); }
       if (/^[1-4]$/.test(e.key)) {
         const n = Number(e.key);
@@ -158,23 +175,28 @@ export default function StudyPage() {
       </div>
     );
   }
+  if (introWord) {
+    const groupStart = queue.slice(0, pos + 1).filter(isIntro).length;
+    return (
+      <div className="mx-auto flex min-h-[calc(100dvh-8rem)] max-w-2xl flex-col">
+        <h1 className="sr-only">Yeni kelime</h1>
+        <TopBar pos={pos} total={queue.length} focus={focus} setFocus={setFocus} />
+        <p className="eyebrow mb-3 flex items-center gap-2"><span className="rounded-full bg-accent px-2 py-0.5 text-[10px] tracking-wider text-on-accent">YENİ KELİME</span> {groupStart}. kelime</p>
+        <IntroCard w={introWord} />
+        <div className="mt-auto pt-6">
+          <Button size="lg" className="w-full" onClick={() => void advance()}>Öğrendim, devam <kbd className="ml-1 rounded border border-on-accent/50 px-1.5 text-xs text-on-accent">Space</kbd></Button>
+          <p className="mt-3 text-center text-xs text-muted">Kelimeler 5’erli tanıtılır; ardından aynı kelimeler sorulur.</p>
+        </div>
+      </div>
+    );
+  }
   if (!card || !word || !prompt) return null;
 
   const isNew = card.reps === 0;
   return (
     <div className="mx-auto flex min-h-[calc(100dvh-8rem)] max-w-2xl flex-col">
       <h1 className="sr-only">Kart çalışması</h1>
-      {/* Üst çubuk */}
-      <div className="mb-6 flex items-center gap-3">
-        <Link to="/kelimeler" className="grid size-10 place-items-center rounded-lg text-muted hover:bg-sunken hover:text-ink" aria-label="Oturumdan çık"><X className="size-5" strokeWidth={1.75} /></Link>
-        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-valuemin={0} aria-valuemax={queue.length} aria-valuenow={pos} aria-label="İlerleme">
-          <div className="h-full rounded-full bg-accent transition-[width] duration-300" style={{ width: `${(pos / queue.length) * 100}%` }} />
-        </div>
-        <span className="w-14 text-right text-sm tabular-nums text-muted">{pos + 1} / {queue.length}</span>
-        <button type="button" onClick={() => setFocus(!focus)} aria-pressed={focus} className="grid size-10 place-items-center rounded-lg text-muted hover:bg-sunken hover:text-ink" aria-label={focus ? 'Odak modundan çık' : 'Odak modu'} title={focus ? 'Odak modundan çık (Esc)' : 'Odak modu'}>
-          {focus ? <Minimize2 className="size-4" strokeWidth={1.75} /> : <Maximize2 className="size-4" strokeWidth={1.75} />}
-        </button>
-      </div>
+      <TopBar pos={pos} total={queue.length} focus={focus} setFocus={setFocus} />
 
       <p className="eyebrow mb-3 flex items-center gap-2">{CARD_TYPE_LABEL[prompt.type]}{isNew && <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] tracking-wider text-on-accent">YENİ</span>}</p>
 
@@ -225,6 +247,51 @@ export default function StudyPage() {
           <p className="mt-3 text-center text-xs text-muted md:hidden">Kartı sola kaydır: Unuttum · sağa: Hatırladım</p>
         </div>
       )}
+    </div>
+  );
+}
+
+function TopBar({ pos, total, focus, setFocus }: { pos: number; total: number; focus: boolean; setFocus: (v: boolean) => void }) {
+  return (
+    <div className="mb-6 flex items-center gap-3">
+      <Link to="/kelimeler" className="grid size-10 place-items-center rounded-lg text-muted hover:bg-sunken hover:text-ink" aria-label="Oturumdan çık"><X className="size-5" strokeWidth={1.75} /></Link>
+      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={pos} aria-label="İlerleme">
+        <div className="h-full rounded-full bg-accent transition-[width] duration-300" style={{ width: `${(pos / total) * 100}%` }} />
+      </div>
+      <span className="w-14 text-right text-sm tabular-nums text-muted">{pos + 1} / {total}</span>
+      <button type="button" onClick={() => setFocus(!focus)} aria-pressed={focus} className="grid size-10 place-items-center rounded-lg text-muted hover:bg-sunken hover:text-ink" aria-label={focus ? 'Odak modundan çık' : 'Odak modu'} title={focus ? 'Odak modundan çık (Esc)' : 'Odak modu'}>
+        {focus ? <Minimize2 className="size-4" strokeWidth={1.75} /> : <Maximize2 className="size-4" strokeWidth={1.75} />}
+      </button>
+    </div>
+  );
+}
+
+/** Yeni kelime tanıtımı: soru yok, yalnız öğretim */
+function IntroCard({ w }: { w: Word }) {
+  const facts = [
+    w.article && `${w.gender === 'f' ? 'dişil' : 'eril'} isim`,
+    w.plural && `çoğulu: ${w.article ? (w.article === 'el' ? 'los ' : 'las ') : ''}${w.plural}`,
+    w.feminine && w.feminine !== w.es && `dişil: ${w.feminine}`,
+    !w.article && POS_LABEL[w.partOfSpeech]
+  ].filter(Boolean) as string[];
+  return (
+    <div className="rounded-2xl border border-line-2 bg-surface p-7 sm:p-9">
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <p lang="es" className="display text-[2.8rem] leading-none sm:text-[3.4rem]">{display(w)}</p>
+        <Ipa w={w} className="text-lg" />
+      </div>
+      <p className="mt-3 text-2xl text-ink-2">{w.tr}</p>
+      {facts.length > 0 && <p className="mt-3 text-sm text-muted">{facts.join(' · ')}</p>}
+      <div className="mt-6 border-t border-line pt-5">
+        <Example w={w} />
+        <p className="mt-1 text-ink-2">{w.exampleTr}</p>
+      </div>
+      {isVerb(w) && (
+        <p className="mt-4 rounded-lg bg-sunken px-4 py-3 text-sm" lang="es">
+          <span className="eyebrow mr-2">Çekim</span>yo {w.conjugations.presente.yo} · tú {w.conjugations.presente.tu} · él/ella {w.conjugations.presente.el}
+        </p>
+      )}
+      {w.latamNote && <p className="mt-4 text-sm text-muted">Latin Amerika: {w.latamNote}</p>}
     </div>
   );
 }
