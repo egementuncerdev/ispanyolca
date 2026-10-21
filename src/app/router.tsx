@@ -24,7 +24,9 @@ export const router = createBrowserRouter([
     children: [
       { path: '/', element: page(() => import('@/features/dashboard/DashboardPage')) },
       { path: '/kurs', element: soon('/kurs', 'A1 Kursu', '8 üniteli A1 kursu: her ünitede ders, kelimeler, alıştırma, quiz, okuma ve ünite testi.') },
-      { path: '/kelimeler', element: soon('/kelimeler', 'Kelimeler', 'Yaklaşık 300 A1 kelime, kelime kartları ve tekrar sistemi bir sonraki aşamada geliyor.') },
+      { path: '/kelimeler', element: page(() => import('@/features/words/WordsPage')) },
+      { path: '/kelimeler/:id', element: page(() => import('@/features/words/WordDetailPage')) },
+      { path: '/calis', element: page(() => import('@/features/flashcards/StudyPage')) },
       { path: '/grammar', element: soon('/grammar', 'Grammar', '23 A1 konusu: kısa anlatım, çekim tabloları ve alıştırmalar.') },
       { path: '/quiz', element: soon('/quiz', 'Quizler', 'Kelime, grammar, çeviri ve boşluk doldurma quizleri.') },
       { path: '/oyunlar', element: soon('/oyunlar', 'Oyunlar', 'Word Match, Hangman, Memory, Speed Quiz ve daha fazlası.') },

@@ -16,7 +16,11 @@ export interface Word {
   /** "el" / "la" / null (isim değilse) */
   article: 'el' | 'la' | null;
   plural?: string;
+  /** sıfat ve meslek adlarında dişil biçim (pequeña, médica) */
+  feminine?: string;
   exampleEs: string;
+  /** örnek cümlede boşluk doldurmada gizlenecek tam biçim (yoksa boşluk kartı üretilmez) */
+  blank?: string;
   exampleTr: string;
   synonyms?: string[];
   antonyms?: string[];

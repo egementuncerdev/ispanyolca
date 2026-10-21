@@ -1,0 +1,122 @@
+/* Selamlaşma, sayılar, aile, ev */
+import { topic } from './helpers';
+
+const s = topic('selamlasma');
+export const GREETINGS = [
+  s.w('hola', 'merhaba', 'interjection', ['¡Hola! ¿Qué tal?', 'Merhaba! Nasılsın?']),
+  s.w('adiós', 'hoşça kal, güle güle', 'interjection', ['Adiós, hasta mañana.', 'Hoşça kal, yarın görüşürüz.']),
+  s.w('buenos días', 'günaydın', 'phrase', ['Buenos días, señora García.', 'Günaydın, García Hanım.']),
+  s.w('buenas tardes', 'iyi günler (öğleden sonra)', 'phrase', ['Buenas tardes, ¿cómo está usted?', 'İyi günler, nasılsınız?']),
+  s.w('buenas noches', 'iyi akşamlar, iyi geceler', 'phrase', ['Buenas noches, hasta mañana.', 'İyi geceler, yarın görüşürüz.']),
+  s.w('hasta luego', 'görüşürüz', 'phrase', ['Me voy. ¡Hasta luego!', 'Ben gidiyorum. Görüşürüz!']),
+  s.w('hasta mañana', 'yarın görüşürüz', 'phrase', ['Buenas noches y hasta mañana.', 'İyi geceler, yarın görüşürüz.']),
+  s.w('por favor', 'lütfen', 'phrase', ['Un café, por favor.', 'Bir kahve, lütfen.']),
+  s.w('gracias', 'teşekkürler', 'interjection', ['Gracias por tu ayuda.', 'Yardımın için teşekkürler.']),
+  s.w('muchas gracias', 'çok teşekkürler', 'phrase', ['Muchas gracias, eres muy amable.', 'Çok teşekkürler, çok naziksin.']),
+  s.w('de nada', 'rica ederim, bir şey değil', 'phrase', ['—Gracias. —De nada.', '—Teşekkürler. —Rica ederim.']),
+  s.w('perdón', 'pardon, affedersiniz', 'interjection', ['Perdón, ¿dónde está la estación?', 'Affedersiniz, istasyon nerede?']),
+  s.w('lo siento', 'üzgünüm, kusura bakma', 'phrase', ['Lo siento, no puedo ir.', 'Kusura bakma, gelemiyorum.']),
+  s.w('sí', 'evet', 'adverb', ['Sí, soy de Turquía.', 'Evet, Türkiyeliyim.'], { antonyms: ['no'] }),
+  s.w('no', 'hayır; değil', 'adverb', ['No, no hablo francés.', 'Hayır, Fransızca konuşmuyorum.'], { antonyms: ['si'] }),
+  s.w('¿qué tal?', 'nasılsın?, ne var ne yok?', 'phrase', ['Hola, Ana, ¿qué tal?', 'Selam Ana, nasılsın?'], { id: 'que-tal', blank: null }),
+  s.w('bien', 'iyi', 'adverb', ['Estoy bien, gracias.', 'İyiyim, teşekkürler.'], { antonyms: ['mal'] }),
+  s.w('mal', 'kötü', 'adverb', ['Hoy estoy un poco mal.', 'Bugün biraz kötüyüm.'], { antonyms: ['bien'] }),
+  s.w('encantado', 'memnun oldum', 'adjective', ['—Soy Lucía. —Encantado.', '—Ben Lucía. —Memnun oldum.'], { feminine: 'encantada', plural: null }),
+  s.w('mucho gusto', 'memnun oldum, tanıştığıma sevindim', 'phrase', ['Mucho gusto, me llamo Pablo.', 'Memnun oldum, benim adım Pablo.']),
+  s.w('bienvenido', 'hoş geldin', 'adjective', ['¡Bienvenido a Madrid!', 'Madrid’e hoş geldin!'], { feminine: 'bienvenida', plural: null }),
+  s.n('señor', 'bey, beyefendi', 'm', ['El señor López es mi vecino.', 'López Bey benim komşum.'], { related: ['senora'] }),
+  s.n('señora', 'hanım, hanımefendi', 'f', ['Buenos días, señora.', 'Günaydın hanımefendi.'], { related: ['senor'] })
+];
+
+const n = topic('sayilar');
+const num = (es: string, tr: string, ex: [string, string], blank?: string) => n.w(es, tr, 'number', ex, blank ? { blank } : {});
+export const NUMBERS = [
+  num('cero', 'sıfır', ['Hace cero grados.', 'Hava sıfır derece.']),
+  num('uno', 'bir', ['Solo quiero uno.', 'Sadece bir tane istiyorum.']),
+  num('dos', 'iki', ['Tengo dos hermanos.', 'İki kardeşim var.']),
+  num('tres', 'üç', ['Son las tres.', 'Saat üç.']),
+  num('cuatro', 'dört', ['Mi casa tiene cuatro habitaciones.', 'Evimde dört oda var.']),
+  num('cinco', 'beş', ['Trabajo cinco días a la semana.', 'Haftada beş gün çalışıyorum.']),
+  num('seis', 'altı', ['Vuelvo a las seis.', 'Altıda dönüyorum.']),
+  num('siete', 'yedi', ['Una semana tiene siete días.', 'Bir haftada yedi gün var.']),
+  num('ocho', 'sekiz', ['Duermo ocho horas.', 'Sekiz saat uyuyorum.']),
+  num('nueve', 'dokuz', ['La clase empieza a las nueve.', 'Ders dokuzda başlıyor.']),
+  num('diez', 'on', ['Son diez euros.', 'On avro.']),
+  num('once', 'on bir', ['Me acuesto a las once.', 'On birde yatıyorum.']),
+  num('doce', 'on iki', ['Un año tiene doce meses.', 'Bir yılda on iki ay var.']),
+  num('trece', 'on üç', ['Mi hermano tiene trece años.', 'Kardeşim on üç yaşında.']),
+  num('catorce', 'on dört', ['Vivo en el número catorce.', 'On dört numarada oturuyorum.']),
+  num('quince', 'on beş', ['Espero quince minutos.', 'On beş dakika bekliyorum.']),
+  num('dieciséis', 'on altı', ['Tengo dieciséis años.', 'On altı yaşındayım.']),
+  num('diecisiete', 'on yedi', ['El autobús diecisiete va al centro.', 'On yedi numaralı otobüs merkeze gidiyor.']),
+  num('dieciocho', 'on sekiz', ['Mi prima tiene dieciocho años.', 'Kuzenim on sekiz yaşında.']),
+  num('diecinueve', 'on dokuz', ['Hay diecinueve estudiantes en la clase.', 'Sınıfta on dokuz öğrenci var.']),
+  num('veinte', 'yirmi', ['Son veinte euros.', 'Yirmi avro.']),
+  num('treinta', 'otuz', ['Mi padre tiene treinta y ocho años.', 'Babam otuz sekiz yaşında.']),
+  num('cuarenta', 'kırk', ['La tienda está a cuarenta metros.', 'Dükkân kırk metre ileride.']),
+  num('cincuenta', 'elli', ['Cuesta cincuenta euros.', 'Elli avro tutuyor.']),
+  num('sesenta', 'altmış', ['Una hora tiene sesenta minutos.', 'Bir saatte altmış dakika var.']),
+  num('setenta', 'yetmiş', ['Mi abuela tiene setenta años.', 'Büyükannem yetmiş yaşında.']),
+  num('ochenta', 'seksen', ['Mi abuelo tiene ochenta años.', 'Büyükbabam seksen yaşında.']),
+  num('noventa', 'doksan', ['El libro tiene noventa páginas.', 'Kitap doksan sayfa.']),
+  num('cien', 'yüz', ['Hay cien personas en la plaza.', 'Meydanda yüz kişi var.'])
+];
+
+const a = topic('aile');
+export const FAMILY = [
+  a.n('familia', 'aile', 'f', ['Mi familia es grande.', 'Ailem kalabalık.']),
+  a.n('padre', 'baba', 'm', ['Mi padre se llama Ahmet.', 'Babamın adı Ahmet.'], { related: ['madre'] }),
+  a.n('madre', 'anne', 'f', ['Mi madre trabaja en un hospital.', 'Annem bir hastanede çalışıyor.'], { related: ['padre'] }),
+  a.n('hermano', 'erkek kardeş', 'm', ['Mi hermano se llama Toprak.', 'Erkek kardeşimin adı Toprak.'], { related: ['hermana'] }),
+  a.n('hermana', 'kız kardeş', 'f', ['Tengo una hermana mayor.', 'Bir ablam var.'], { related: ['hermano'] }),
+  a.n('hijo', 'oğul', 'm', ['Su hijo tiene cinco años.', 'Oğlu beş yaşında.'], { related: ['hija'] }),
+  a.n('hija', 'kız (evlat)', 'f', ['Tienen una hija pequeña.', 'Küçük bir kızları var.'], { related: ['hijo'] }),
+  a.n('abuelo', 'dede, büyükbaba', 'm', ['Mi abuelo vive en el pueblo.', 'Dedem köyde yaşıyor.'], { related: ['abuela'] }),
+  a.n('abuela', 'nine, büyükanne', 'f', ['Mi abuela cocina muy bien.', 'Ninem çok güzel yemek yapar.'], { related: ['abuelo'] }),
+  a.n('tío', 'amca, dayı, enişte', 'm', ['Mi tío vive en Barcelona.', 'Amcam Barselona’da yaşıyor.'], { related: ['tia'] }),
+  a.n('tía', 'hala, teyze, yenge', 'f', ['Mi tía es profesora.', 'Teyzem öğretmen.'], { related: ['tio'] }),
+  a.n('primo', 'kuzen (erkek)', 'm', ['Mi primo juega al fútbol.', 'Kuzenim futbol oynuyor.'], { related: ['prima'] }),
+  a.n('prima', 'kuzen (kız)', 'f', ['Mi prima estudia en la universidad.', 'Kuzenim üniversitede okuyor.'], { related: ['primo'] }),
+  a.n('marido', 'koca, eş', 'm', ['Su marido es médico.', 'Kocası doktor.'], { synonyms: ['esposo'], related: ['mujer'] }),
+  a.n('mujer', 'kadın; karı, eş', 'f', ['Su mujer es de Valencia.', 'Karısı Valensiyalı.'], { synonyms: ['esposa'], related: ['marido'] }),
+  a.n('novio', 'erkek arkadaş, sevgili', 'm', ['Mi novio se llama Javier.', 'Sevgilimin adı Javier.'], { related: ['novia'] }),
+  a.n('novia', 'kız arkadaş, sevgili', 'f', ['Su novia es muy simpática.', 'Kız arkadaşı çok sempatik.'], { related: ['novio'] }),
+  a.n('bebé', 'bebek', 'm', ['El bebé duerme.', 'Bebek uyuyor.'], { emoji: '👶' }),
+  a.n('niño', 'erkek çocuk', 'm', ['El niño juega en el parque.', 'Çocuk parkta oynuyor.'], { related: ['nina'] }),
+  a.n('niña', 'kız çocuk', 'f', ['La niña lee un libro.', 'Kız çocuk kitap okuyor.'], { related: ['nino'] }),
+  a.n('amigo', 'arkadaş (erkek)', 'm', ['Carlos es mi mejor amigo.', 'Carlos en iyi arkadaşım.'], { related: ['amiga'] }),
+  a.n('amiga', 'arkadaş (kız)', 'f', ['Helin es mi amiga.', 'Helin benim arkadaşım.'], { related: ['amigo'] })
+];
+
+const e = topic('ev');
+export const HOME = [
+  e.n('casa', 'ev', 'f', ['Mi casa es pequeña.', 'Evim küçük.'], { emoji: '🏠' }),
+  e.n('piso', 'daire; kat', 'm', ['Vivo en un piso en el centro.', 'Merkezde bir dairede oturuyorum.'], { latamNote: 'Latin Amerika’da daire için genelde “departamento” ya da “apartamento”.' }),
+  e.n('habitación', 'oda', 'f', ['Mi habitación es muy luminosa.', 'Odam çok aydınlık.']),
+  e.n('dormitorio', 'yatak odası', 'm', ['El dormitorio está arriba.', 'Yatak odası yukarıda.']),
+  e.n('cocina', 'mutfak', 'f', ['Mi madre está en la cocina.', 'Annem mutfakta.']),
+  e.n('baño', 'banyo, tuvalet', 'm', ['¿Dónde está el baño?', 'Tuvalet nerede?']),
+  e.n('salón', 'oturma odası, salon', 'm', ['Vemos la tele en el salón.', 'Salonda televizyon izliyoruz.']),
+  e.n('puerta', 'kapı', 'f', ['Cierra la puerta, por favor.', 'Kapıyı kapat, lütfen.'], { emoji: '🚪' }),
+  e.n('ventana', 'pencere', 'f', ['Abro la ventana.', 'Pencereyi açıyorum.'], { emoji: '🪟' }),
+  e.n('mesa', 'masa', 'f', ['Las llaves están en la mesa.', 'Anahtarlar masada.']),
+  e.n('silla', 'sandalye', 'f', ['Hay cuatro sillas en la cocina.', 'Mutfakta dört sandalye var.'], { emoji: '🪑', blank: 'sillas' }),
+  e.n('cama', 'yatak', 'f', ['La cama es muy cómoda.', 'Yatak çok rahat.'], { emoji: '🛏️' }),
+  e.n('sofá', 'kanepe', 'm', ['El gato duerme en el sofá.', 'Kedi kanepede uyuyor.'], { emoji: '🛋️' }),
+  e.n('lámpara', 'lamba', 'f', ['La lámpara está encendida.', 'Lamba açık.'], { emoji: '💡' }),
+  e.n('armario', 'dolap, gardırop', 'm', ['La ropa está en el armario.', 'Kıyafetler dolapta.']),
+  e.n('llave', 'anahtar', 'f', ['No encuentro la llave.', 'Anahtarı bulamıyorum.'], { emoji: '🔑' }),
+  e.n('jardín', 'bahçe', 'm', ['Los niños juegan en el jardín.', 'Çocuklar bahçede oynuyor.']),
+  e.n('ducha', 'duş', 'f', ['La ducha está en el baño.', 'Duş banyoda.'], { emoji: '🚿', related: ['ducharse'] }),
+  e.n('espejo', 'ayna', 'm', ['Me miro en el espejo.', 'Aynada kendime bakıyorum.'], { emoji: '🪞' }),
+  e.n('nevera', 'buzdolabı', 'f', ['La leche está en la nevera.', 'Süt buzdolabında.'], { latamNote: 'Latin Amerika’da sık “refrigerador” ya da “heladera”.' }),
+  e.n('televisor', 'televizyon (cihaz)', 'm', ['El televisor es nuevo.', 'Televizyon yeni.'], { emoji: '📺' }),
+  e.n('ordenador', 'bilgisayar', 'm', ['Trabajo con el ordenador.', 'Bilgisayarla çalışıyorum.'], { emoji: '💻', latamNote: 'Latin Amerika’da “computadora”.' }),
+  e.n('teléfono', 'telefon', 'm', ['¿Cuál es tu número de teléfono?', 'Telefon numaran ne?'], { emoji: '☎️' }),
+  e.n('móvil', 'cep telefonu', 'm', ['Mi móvil no tiene batería.', 'Telefonumun şarjı yok.'], { emoji: '📱', latamNote: 'Latin Amerika’da “celular”.' }),
+  e.n('libro', 'kitap', 'm', ['Leo un libro muy interesante.', 'Çok ilginç bir kitap okuyorum.'], { emoji: '📖' }),
+  e.n('reloj', 'saat (eşya)', 'm', ['Mi reloj es de mi abuelo.', 'Saatim dedemin.'], { emoji: '⌚', plural: 'relojes' }),
+  e.n('ropa', 'kıyafet, giysi', 'f', ['Compro ropa nueva.', 'Yeni kıyafet alıyorum.'], { plural: null }),
+  e.n('perro', 'köpek', 'm', ['Mi perro se llama Rex.', 'Köpeğimin adı Rex.'], { emoji: '🐶' }),
+  e.n('gato', 'kedi', 'm', ['El gato está en la ventana.', 'Kedi pencerede.'], { emoji: '🐱' })
+];

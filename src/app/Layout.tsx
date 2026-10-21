@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
 import { Ellipsis, X } from 'lucide-react';
 import { NAV } from './nav';
+import { useFocusMode } from './focus';
 
 const linkState = ({ isActive }: { isActive: boolean }) =>
   `group relative flex items-center gap-3 rounded-lg px-3 py-2 text-[14.5px] transition-colors ${isActive ? 'bg-sunken font-semibold text-ink' : 'text-ink-2 hover:bg-sunken/60 hover:text-ink'}`;
@@ -99,15 +100,17 @@ function BottomNav() {
 
 export function Layout() {
   const { pathname } = useLocation();
+  const { focus, setFocus } = useFocusMode();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  useEffect(() => { if (!pathname.startsWith('/calis')) setFocus(false); }, [pathname, setFocus]);
   return (
     <div className="flex min-h-dvh">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2">İçeriğe geç</a>
-      <Sidebar />
-      <main id="main" tabIndex={-1} className="min-w-0 flex-1 px-4 pt-8 pb-28 focus:outline-none sm:px-8 md:pb-12 lg:px-14 lg:pt-12">
+      {!focus && <Sidebar />}
+      <main id="main" tabIndex={-1} className={`min-w-0 flex-1 px-4 focus:outline-none sm:px-8 lg:px-14 ${focus ? 'pt-6 pb-10' : 'pt-8 pb-28 md:pb-12 lg:pt-12'}`}>
         <div className="mx-auto max-w-[68rem]"><Outlet /></div>
       </main>
-      <BottomNav />
+      {!focus && <BottomNav />}
     </div>
   );
 }

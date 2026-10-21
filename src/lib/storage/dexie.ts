@@ -1,6 +1,6 @@
 /* Repository arayüzlerinin IndexedDB (Dexie) uygulaması */
 import { AppDB, TABLES } from './db';
-import type { BackupFile, BackupService, EventsRepo, FavoritesRepo, SettingsRepo } from './repositories';
+import type { BackupFile, BackupService, CardRepo, EventsRepo, FavoritesRepo, ReviewRepo, SessionRepo, SettingsRepo } from './repositories';
 import { DEFAULT_SETTINGS, type Settings } from '@/types/user';
 
 export const BACKUP_VERSION = 1;
@@ -34,6 +34,26 @@ export function createRepos(db: AppDB) {
     all: () => db.events.toArray()
   };
 
+  const cards: CardRepo = {
+    all: () => db.cards.toArray(),
+    byWord: (wordId) => db.cards.where('wordId').equals(wordId).toArray(),
+    dueBefore: (iso) => db.cards.where('due').belowOrEqual(iso).toArray(),
+    async put(c) { await db.cards.put(c); },
+    async bulkPut(cs) { await db.cards.bulkPut(cs); },
+    async wordIds() { return new Set((await db.cards.orderBy('wordId').uniqueKeys()) as string[]); }
+  };
+
+  const reviews: ReviewRepo = {
+    async add(r) { await db.reviews.add(r); },
+    all: () => db.reviews.toArray(),
+    byDay: (dayKey) => db.reviews.where('dayKey').equals(dayKey).toArray()
+  };
+
+  const sessions: SessionRepo = {
+    async add(s) { await db.sessions.add(s); },
+    byDay: (dayKey) => db.sessions.where('dayKey').equals(dayKey).toArray()
+  };
+
   const backup: BackupService = {
     async exportAll() {
       const data: Record<string, unknown[]> = {};
@@ -55,7 +75,7 @@ export function createRepos(db: AppDB) {
     }
   };
 
-  return { settings, favorites, events, backup };
+  return { settings, favorites, events, cards, reviews, sessions, backup };
 }
 
 export class BackupError extends Error {}

@@ -1,6 +1,6 @@
 /* Repository arayüzleri. Uygulama yalnız bunları kullanır; ileride Supabase vb.
    bir backend'e geçmek = bu arayüzlerin yeni bir uygulamasını yazmak. */
-import type { ActivityEvent, Favorite, Settings } from '@/types/user';
+import type { ActivityEvent, CardState, Favorite, ReviewLog, Settings, StudySession } from '@/types/user';
 
 export interface SettingsRepo {
   get(): Promise<Settings>;
@@ -16,6 +16,28 @@ export interface EventsRepo {
   add(e: Omit<ActivityEvent, 'id'>): Promise<void>;
   byDay(dayKey: string): Promise<ActivityEvent[]>;
   all(): Promise<ActivityEvent[]>;
+}
+
+export interface CardRepo {
+  all(): Promise<CardState[]>;
+  byWord(wordId: string): Promise<CardState[]>;
+  /** zamanı gelmiş kartlar (due <= iso) */
+  dueBefore(iso: string): Promise<CardState[]>;
+  put(c: CardState): Promise<void>;
+  bulkPut(cs: CardState[]): Promise<void>;
+  /** kartı olan kelime id'leri */
+  wordIds(): Promise<Set<string>>;
+}
+
+export interface ReviewRepo {
+  add(r: Omit<ReviewLog, 'id'>): Promise<void>;
+  all(): Promise<ReviewLog[]>;
+  byDay(dayKey: string): Promise<ReviewLog[]>;
+}
+
+export interface SessionRepo {
+  add(s: Omit<StudySession, 'id'>): Promise<void>;
+  byDay(dayKey: string): Promise<StudySession[]>;
 }
 
 export interface BackupFile {
