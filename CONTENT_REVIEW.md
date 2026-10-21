@@ -453,3 +453,560 @@
 | acostarse * | me acuesto | te acuestas | se acuesta | nos acostamos | os acostáis | se acuestan |
 
 \* düzensiz ya da kök değişimli
+
+# Grammar
+
+## Kişi zamirleri
+
+İspanyolcada özne zamirleri yo, tú, él, ella, usted, nosotros, vosotros, ellos, ellas ve ustedes. Fiilin çekimi kişiyi zaten gösterdiği için zamir çoğu zaman söylenmez.
+
+- Yo soy Egemen. — Ben Egemen’im.
+- ¿Usted es la señora García? — Siz García Hanım mısınız?
+- Nosotras somos amigas. — Biz arkadaşız. (kadınlar)
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | “Sen” hangisi? | tú (şıklar: tu, usted, vosotros) |
+| multiple_choice | İspanya’da bir grup arkadaşa “siz” derken: | vosotros (şıklar: ustedes, ellos, nosotros) |
+| multiple_choice | Ana y María → ? | ellas (şıklar: ellos, nosotras, ustedes) |
+| multiple_choice | Resmî “siz” (tek kişi): | usted (şıklar: tú, vosotros, él) |
+| multiple_choice | Carlos y Ana → ? | ellos (şıklar: ellas, nosotros, vosotras) |
+| fill_blank | ___ soy estudiante. (ben) | Yo |
+| fill_blank | ___ eres mi amigo. (sen) | Tú |
+| fill_blank | ___ somos de Turquía. (biz, erkekler) | Nosotros |
+| translate_tr_es | Onlar (kadınlar) öğrenci. | Ellas son estudiantes |
+| translate_es_tr | Usted es muy amable. | Siz çok naziksiniz. (şıklar: Sen çok naziksin., Onlar çok nazik.) |
+| word_order | (sıralama) | Vosotros sois mis amigos. |
+| fix_sentence | Tu eres español. | Tú eres español. |
+
+## Ser
+
+Ser “olmak” demektir ve kalıcı ya da tanımlayıcı özellikler için kullanılır: kimlik, meslek, milliyet, köken, karakter, saat ve tarih. Düzensiz bir fiildir.
+
+- Soy de Estambul. — İstanbulluyum.
+- Mi madre es profesora. — Annem öğretmen.
+- Son las tres. — Saat üç.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ estudiante. | soy |
+| multiple_choice | Nosotros ___ de Turquía. | somos (şıklar: son, sois, estamos) |
+| fill_blank | ¿De dónde ___ tú? | eres |
+| fill_blank | Ellos ___ mis primos. | son |
+| fill_blank | Vosotros ___ muy simpáticos. | sois |
+| fill_blank | Mi padre ___ ingeniero. | es |
+| multiple_choice | Saat üç: “___ las tres.” | Son (şıklar: Es, Están, Hay) |
+| fix_sentence | Yo es profesor. | Yo soy profesor. · Soy profesor. |
+| fix_sentence | Soy un estudiante. | Soy estudiante. |
+| word_order | (sıralama) | Mi hermana es muy inteligente. |
+| translate_tr_es | Ben Türküm. | Soy turco · Soy turca · Yo soy turco · Yo soy turca |
+| translate_es_tr | Somos de Madrid. | Madrid’liyiz. (şıklar: Madrid’deyiz., Madrid’e gidiyoruz.) |
+| translate_tr_es | Sen çok sempatiksin. | Eres muy simpático · Eres muy simpática · Tú eres muy simpático · Tú eres muy simpática |
+
+## Estar
+
+Estar da “olmak” demektir ama geçici durumlar, duygular ve yer/konum için kullanılır. Düzensiz bir fiildir; çoğu biçimi aksanlıdır.
+
+- Estoy en casa. — Evdeyim.
+- ¿Cómo estás? —Bien, gracias. — Nasılsın? —İyiyim, teşekkürler.
+- La tienda está cerrada. — Dükkân kapalı.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ en casa. | estoy |
+| multiple_choice | ¿Cómo ___ tú? | estás (şıklar: eres, está, estáis) |
+| fill_blank | Madrid ___ en España. | está |
+| fill_blank | Nosotros ___ cansados. | estamos |
+| fill_blank | ¿Dónde ___ mis llaves? | están |
+| fill_blank | Vosotros ___ en la playa. | estáis |
+| multiple_choice | Kahve soğumuş: “El café ___ frío.” | está (şıklar: es, esta, hay) |
+| fix_sentence | Yo soy en la oficina. | Yo estoy en la oficina. · Estoy en la oficina. |
+| fix_sentence | Ella esta triste. | Ella está triste. |
+| word_order | (sıralama) | Mis padres están en Madrid. |
+| translate_tr_es | Evdeyim. | Estoy en casa · Yo estoy en casa |
+| translate_es_tr | La farmacia está cerrada. | Eczane kapalı. (şıklar: Eczane kapanıyor., Eczane uzakta.) |
+| translate_tr_es | Bugün mutluyum. | Hoy estoy contento · Hoy estoy contenta · Estoy contento hoy · Estoy contenta hoy |
+
+## Ser mi, estar mı?
+
+İkisi de “olmak”. Kabaca: ser bir şeyin NE olduğunu, estar NASIL ya da NEREDE olduğunu söyler.
+
+- Es profesor, pero hoy está enfermo. — Öğretmen ama bugün hasta.
+- La sopa está caliente. — Çorba sıcak.
+- Mi casa es grande y está cerca. — Evim büyük ve yakında.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | Yo ___ de Turquía. | soy (şıklar: estoy, es, estás) |
+| multiple_choice | Ahora ___ en el trabajo. | estoy (şıklar: soy, es, hay) |
+| multiple_choice | María ___ muy simpática. | es (şıklar: está, son, estás) |
+| multiple_choice | La película ___ aburrida. (film sıkıcı) | es (şıklar: está, son, estamos) |
+| multiple_choice | Hoy ___ aburrido en casa. (sıkıldım) | estoy (şıklar: soy, es, está) |
+| fill_blank | El museo ___ en el centro. | está |
+| fill_blank | Mi hermano ___ médico. | es |
+| fill_blank | Nosotros ___ muy cansados hoy. | estamos |
+| fill_blank | ___ las cinco de la tarde. | Son |
+| fix_sentence | Estoy de Estambul. | Soy de Estambul. |
+| fix_sentence | La sopa es caliente hoy. | La sopa está caliente hoy. |
+| multiple_choice | “La cena ___ lista.” (yemek hazır) | está (şıklar: es, son, hay) |
+| translate_tr_es | Ana yorgun. | Ana está cansada |
+| translate_es_tr | Mi casa es grande y está cerca. | Evim büyük ve yakında. (şıklar: Evim büyük ve uzakta., Evim büyük olacak.) |
+
+## Tener ve yaş
+
+Tener “sahip olmak” demektir; Türkçedeki “…-im var” yapısının karşılığı. Yaş da tener ile söylenir: Tengo veinte años (yirmi yaşındayım).
+
+- Tengo un gato negro. — Siyah bir kedim var.
+- ¿Cuántos años tienes? —Tengo veinticinco años. — Kaç yaşındasın? —Yirmi beş yaşındayım.
+- Tengo que estudiar. — Ders çalışmam lazım.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ dos hermanos. | tengo |
+| multiple_choice | ¿Cuántos años ___ tú? | tienes (şıklar: eres, tenes, tiene) |
+| multiple_choice | Mi abuela ___ ochenta años. | tiene (şıklar: es, está, tienen) |
+| fill_blank | Nosotros ___ un perro. | tenemos |
+| fill_blank | Vosotros ___ mucha suerte. | tenéis |
+| fill_blank | Ellos ___ una casa en la playa. | tienen |
+| fix_sentence | Soy veinte años. | Tengo veinte años. |
+| multiple_choice | Acıktım: | Tengo hambre. (şıklar: Soy hambre., Estoy hambre., Hay hambre.) |
+| multiple_choice | Üşüyorum: | Tengo frío. (şıklar: Soy frío., Hace frío., Estoy frío.) |
+| fill_blank | Tengo ___ trabajar mañana. (-mek zorundayım) | que |
+| word_order | (sıralama) | ¿Cuántos años tiene tu hermana? |
+| translate_tr_es | Bir kedim var. | Tengo un gato · Yo tengo un gato |
+| translate_tr_es | On sekiz yaşındayım. | Tengo dieciocho años · Tengo 18 años · Yo tengo dieciocho años |
+| translate_es_tr | Tenemos que estudiar. | Ders çalışmamız lazım. (şıklar: Ders çalışıyoruz., Ders çalışmak istiyoruz.) |
+
+## Belirli ve belirsiz artikeller
+
+İsimlerin önünde artikel gelir. Belirli artikel (el, la, los, las) bilinen şeyler için; belirsiz artikel (un, una, unos, unas) “bir, birkaç” anlamında.
+
+- Tengo un perro. El perro se llama Rex. — Bir köpeğim var. Köpeğin adı Rex.
+- Hay unas sillas en la cocina. — Mutfakta birkaç sandalye var.
+- Voy al supermercado. — Süpermarkete gidiyorum.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | ___ casa (belirli) | la (şıklar: el, los, un) |
+| multiple_choice | ___ libros (belirli) | los (şıklar: las, el, unos) |
+| fill_blank | Tengo ___ perro. (bir) | un |
+| fill_blank | ___ mesa es grande. (belirli) | La |
+| fill_blank | Quiero ___ café. (bir) | un |
+| fill_blank | Hay ___ manzana en la mesa. (bir) | una |
+| multiple_choice | ___ agua está fría. | El (şıklar: La, Las, Un) |
+| fill_blank | Voy ___ cine. (a + el) | al |
+| fill_blank | Vengo ___ parque. (de + el) | del |
+| fix_sentence | Voy a el museo. | Voy al museo. |
+| fix_sentence | La problema es difícil. | El problema es difícil. |
+| word_order | (sıralama) | Los niños juegan en el parque. |
+| translate_tr_es | Masada bir elma var. | Hay una manzana en la mesa |
+| translate_es_tr | Me gusta el café. | Kahveyi severim. (şıklar: Bu kahveyi istiyorum., Bir kahve istiyorum.) |
+
+## Eril ve dişil
+
+Her isim ya eril ya dişildir. -o ile bitenler genelde eril, -a ile bitenler genelde dişil; ama istisnalar var. En güvenlisi kelimeyi artikeliyle öğrenmek: la casa, el día.
+
+- El día es largo. — Gün uzun.
+- La ciudad es bonita. — Şehir güzel.
+- La profesora es simpática. — Öğretmen (kadın) sempatik.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | ___ libro | el (şıklar: la) |
+| multiple_choice | ___ ciudad | la (şıklar: el) |
+| multiple_choice | ___ día | el (şıklar: la) |
+| multiple_choice | ___ estación | la (şıklar: el) |
+| multiple_choice | ___ problema | el (şıklar: la) |
+| multiple_choice | ___ mano | la (şıklar: el) |
+| multiple_choice | ___ color | el (şıklar: la) |
+| fill_blank | Mi tío es médico y mi tía es ___. (doktor) | médica |
+| fill_blank | El profesor y ___ profesora. | la |
+| fix_sentence | La mapa está en la mesa. | El mapa está en la mesa. |
+| fix_sentence | El foto es bonita. | La foto es bonita. |
+| word_order | (sıralama) | La ciudad es muy bonita. |
+| translate_tr_es | Gün uzun. | El día es largo |
+
+## Çoğul
+
+Çoğul yapmak kolay: sesliyle biten kelimeye -s, ünsüzle bitene -es eklenir. Artikel de çoğul olur: el → los, la → las.
+
+- Tengo dos libros. — İki kitabım var.
+- Las ciudades españolas son bonitas. — İspanyol şehirleri güzel.
+- Los lunes trabajo. — Pazartesileri çalışırım.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | el libro → los ___ | libros |
+| fill_blank | la ciudad → las ___ | ciudades |
+| multiple_choice | el lápiz → los ___ | lápices (şıklar: lápizes, lápizs, lápiz) |
+| fill_blank | la mesa → las ___ | mesas |
+| fill_blank | el tren → los ___ | trenes |
+| fill_blank | la estación → las ___ | estaciones |
+| multiple_choice | el lunes → los ___ | lunes (şıklar: luneses, lunesos, lune) |
+| fill_blank | ___ casas son grandes. (belirli) | Las |
+| fix_sentence | Tengo dos perroes. | Tengo dos perros. |
+| fix_sentence | Los ciudades son bonitas. | Las ciudades son bonitas. |
+| word_order | (sıralama) | Las chicas son simpáticas. |
+| translate_tr_es | İki kedim var. | Tengo dos gatos · Yo tengo dos gatos |
+| translate_es_tr | Mis padres viven en Estambul. | Annemle babam İstanbul’da yaşıyor. (şıklar: Babalarım İstanbul’da yaşıyor., Babam İstanbul’da yaşıyor.) |
+
+## Sıfatlar ve uyum
+
+Sıfat, nitelediği ismin cinsiyetine ve sayısına uyar; genelde ismin arkasına gelir: una casa blanca (beyaz bir ev).
+
+- Tengo un coche rojo. — Kırmızı bir arabam var.
+- Las casas son blancas. — Evler beyaz.
+- Es un buen amigo. — İyi bir arkadaş.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | la casa ___ (beyaz) | blanca (şıklar: blanco, blancas, blancos) |
+| multiple_choice | los perros ___ (siyah) | negros (şıklar: negro, negras, negra) |
+| fill_blank | una chica ___ (zeki) | inteligente |
+| fill_blank | Mi habitación es ___. (küçük) | pequeña |
+| fill_blank | Los tomates son ___. (kırmızı) | rojos |
+| fill_blank | Tengo dos camisetas ___. (mavi) | azules |
+| multiple_choice | Es un ___ libro. | buen (şıklar: bueno, buena, buenos) |
+| fix_sentence | La casa es blanco. | La casa es blanca. |
+| fix_sentence | Tengo un gato negra. | Tengo un gato negro. |
+| word_order | (sıralama) | Tengo una bicicleta nueva. |
+| translate_tr_es | Kırmızı bir arabam var. | Tengo un coche rojo · Tengo un carro rojo |
+| translate_es_tr | Las chicas son muy simpáticas. | Kızlar çok sempatik. (şıklar: Kız çok sempatik., Kızlar sempatik değil.) |
+| translate_tr_es | Ev büyük ve güzel. | La casa es grande y bonita |
+
+## -AR fiilleri
+
+Mastarı -ar ile biten düzenli fiillerde -ar düşer, kişiye göre ek gelir: hablar → hablo, hablas, habla…
+
+- Trabajo en una oficina. — Bir ofiste çalışıyorum.
+- ¿Hablas inglés? — İngilizce konuşuyor musun?
+- Estudiamos español. — İspanyolca çalışıyoruz.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ (hablar) español. | hablo |
+| multiple_choice | Tú ___ (trabajar) mucho. | trabajas (şıklar: trabaja, trabajo, trabajáis) |
+| fill_blank | Nosotros ___ (estudiar) juntos. | estudiamos |
+| fill_blank | Ella ___ (cocinar) muy bien. | cocina |
+| fill_blank | Vosotros ___ (escuchar) música. | escucháis |
+| fill_blank | Ellos ___ (comprar) fruta. | compran |
+| fill_blank | ¿Usted ___ (hablar) inglés? | habla |
+| fix_sentence | Yo trabaja en un banco. | Yo trabajo en un banco. · Trabajo en un banco. |
+| fix_sentence | Nosotros hablan español. | Nosotros hablamos español. · Hablamos español. |
+| word_order | (sıralama) | Mis padres viajan mucho. |
+| translate_tr_es | İspanyolca çalışıyorum. | Estudio español · Yo estudio español |
+| translate_tr_es | Bir restoranda çalışıyoruz. | Trabajamos en un restaurante · Nosotros trabajamos en un restaurante |
+| translate_es_tr | ¿Escuchas la radio? | Radyo dinliyor musun? (şıklar: Radyoyu açıyor musun?, Radyo dinliyor muyuz?) |
+
+## -ER fiilleri
+
+-er ile biten düzenli fiillerde ekler -o, -es, -e, -emos, -éis, -en şeklindedir: comer → como, comes, come…
+
+- Como en casa. — Evde yemek yiyorum.
+- ¿Bebes café? — Kahve içer misin?
+- Leemos un libro. — Bir kitap okuyoruz.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ (comer) pasta. | como |
+| multiple_choice | Tú ___ (beber) agua. | bebes (şıklar: bebe, bebas, bebéis) |
+| fill_blank | Nosotros ___ (leer) mucho. | leemos |
+| fill_blank | Mi hermano ___ (aprender) inglés. | aprende |
+| fill_blank | Vosotros ___ (comer) muy tarde. | coméis |
+| fill_blank | Ellos ___ (vender) fruta en el mercado. | venden |
+| fill_blank | ¿Usted ___ (comprender) el español? | comprende |
+| multiple_choice | Ella ___ (beber) té. | bebe (şıklar: beba, bebo, bebes) |
+| fix_sentence | Nosotros comamos a las dos. | Nosotros comemos a las dos. · Comemos a las dos. |
+| fix_sentence | Yo lee un libro. | Yo leo un libro. · Leo un libro. |
+| word_order | (sıralama) | Los niños comen fruta. |
+| translate_tr_es | Çok su içiyorum. | Bebo mucha agua · Yo bebo mucha agua |
+| translate_es_tr | Aprendemos palabras nuevas. | Yeni kelimeler öğreniyoruz. (şıklar: Yeni kelimeler öğreniyorum., Yeni kelimeler öğretiyoruz.) |
+
+## -IR fiilleri
+
+-ir fiillerinin ekleri -er fiilleriyle neredeyse aynıdır; yalnız nosotros (-imos) ve vosotros (-ís) farklıdır: vivir → vivimos, vivís.
+
+- Vivo en Estambul. — İstanbul’da yaşıyorum.
+- ¿Dónde vives? — Nerede yaşıyorsun?
+- Escribimos un correo. — Bir e-posta yazıyoruz.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ (vivir) en Estambul. | vivo |
+| multiple_choice | Nosotros ___ (vivir) cerca. | vivimos (şıklar: vivemos, viven, vivís) |
+| fill_blank | Vosotros ___ (escribir) mucho. | escribís |
+| fill_blank | Ella ___ (abrir) la ventana. | abre |
+| fill_blank | ¿Tú ___ (escribir) a tu abuela? | escribes |
+| fill_blank | Ellos ___ (recibir) muchos mensajes. | reciben |
+| fill_blank | Nosotros ___ (compartir) un piso. | compartimos |
+| multiple_choice | comer → comemos, vivir → ___ | vivimos (şıklar: vivemos, vivamos, vivís) |
+| fix_sentence | Nosotros vivemos en Madrid. | Nosotros vivimos en Madrid. · Vivimos en Madrid. |
+| fix_sentence | Vosotros escribéis bien. | Vosotros escribís bien. · Escribís bien. |
+| word_order | (sıralama) | Mis abuelos viven en un pueblo. |
+| translate_tr_es | Nerede yaşıyorsun? | ¿Dónde vives? · ¿Dónde vives tú? |
+| translate_es_tr | La tienda abre a las diez. | Dükkân saat onda açılıyor. (şıklar: Dükkân saat onda kapanıyor., Dükkân on dakika açık.) |
+
+## Olumsuz cümle
+
+Olumsuz yapmak için fiilin önüne no koymak yeter: No hablo francés. İspanyolcada çift olumsuz normaldir: No tengo nada (hiçbir şeyim yok).
+
+- No soy de Madrid. — Madridli değilim.
+- No me gusta el café. — Kahveyi sevmem.
+- No hay nadie en casa. — Evde kimse yok.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | “İngilizce konuşmuyorum.” | No hablo inglés. (şıklar: Hablo no inglés., No inglés hablo., Hablo inglés no.) |
+| fill_blank | ___ tengo hambre. (değil) | No |
+| multiple_choice | “Hiçbir şey yemiyorum.” | No como nada. (şıklar: Como nada., No como algo., Nada no como.) |
+| fix_sentence | Yo hablo no francés. | Yo no hablo francés. · No hablo francés. |
+| fix_sentence | Me no gusta el té. | No me gusta el té. |
+| fill_blank | No hay ___ en la oficina. (hiç kimse) | nadie |
+| fill_blank | No como carne ___. (asla) | nunca |
+| multiple_choice | Doğru cümle hangisi? | Nunca bebo café. (şıklar: No nunca bebo café., Bebo nunca café., Nunca no bebo café.) |
+| word_order | (sıralama) | No vivo en el centro. |
+| word_order | (sıralama) | Mi hermano no tiene coche. |
+| translate_tr_es | Madridli değilim. | No soy de Madrid · Yo no soy de Madrid |
+| translate_tr_es | Evde kimse yok. | No hay nadie en casa |
+| translate_es_tr | No tengo nada. | Hiçbir şeyim yok. (şıklar: Her şeyim var., Bir şeyim var mı?) |
+
+## Soru cümlesi ve soru kelimeleri
+
+Soru başta ¿ sonda ? ile yazılır. Evet/hayır sorularında kelime sırası çoğu zaman aynı kalır, ses yükselir. Soru kelimeleri her zaman aksanlıdır.
+
+- ¿De dónde eres? —Soy de Turquía. — Nerelisin? —Türkiyeliyim.
+- ¿Por qué estudias español? —Porque me gusta. — Neden İspanyolca çalışıyorsun? —Çünkü hoşuma gidiyor.
+- ¿Cuántos hermanos tienes? — Kaç kardeşin var?
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | “Nerede yaşıyorsun?” | ¿Dónde vives? (şıklar: ¿Qué vives?, ¿Cuándo vives?, ¿Cómo vives?) |
+| fill_blank | ¿___ te llamas? (nasıl) | Cómo |
+| multiple_choice | “Nerelisin?” | ¿De dónde eres? (şıklar: ¿Dónde eres?, ¿Adónde eres?, ¿De dónde estás?) |
+| fill_blank | ¿___ es tu cumpleaños? (ne zaman) | Cuándo |
+| fill_blank | ¿___ es ella? (kim) | Quién |
+| fill_blank | ¿___ hermanas tienes? (kaç) | Cuántas |
+| multiple_choice | —¿Por qué estudias? —___ tengo un examen. | Porque (şıklar: Por qué, Porqué, Para) |
+| fill_blank | ¿___ vas? —Voy al cine. (nereye) | Adónde · A dónde |
+| fix_sentence | Donde está el baño? | ¿Dónde está el baño? |
+| word_order | (sıralama) | ¿Dónde está la estación? |
+| word_order | (sıralama) | ¿Cuántos años tiene tu madre? |
+| translate_tr_es | Saat kaç? | ¿Qué hora es? |
+| translate_es_tr | ¿Cuál es tu color favorito? | En sevdiğin renk ne? (şıklar: Hangi renk güzel?, Rengin ne zaman?) |
+
+## Hay mi, estar mı?
+
+Hay “var” demektir; bir şeyin varlığını söyler ve tekilde de çoğulda da aynıdır. Estar ise bilinen, belirli bir şeyin nerede olduğunu söyler.
+
+- Hay un parque cerca de mi casa. — Evimin yakınında bir park var.
+- El parque está al lado del museo. — Park müzenin yanında.
+- ¿Hay leche en la nevera? — Buzdolabında süt var mı?
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | ___ un hospital cerca. (var) | Hay (şıklar: Está, Es, Están) |
+| multiple_choice | El hospital ___ cerca. | está (şıklar: hay, es, están) |
+| fill_blank | En mi calle ___ dos tiendas. | hay |
+| multiple_choice | Mis llaves ___ en la mesa. | están (şıklar: hay, son, está) |
+| multiple_choice | ___ muchos turistas en Madrid. | Hay (şıklar: Están, Son, Es) |
+| fill_blank | ¿___ una farmacia por aquí? | Hay |
+| fill_blank | La farmacia ___ al lado del banco. | está |
+| fill_blank | No ___ leche en la nevera. | hay |
+| fix_sentence | Está un museo en la plaza. | Hay un museo en la plaza. |
+| fix_sentence | Hay el banco en la calle Mayor. | El banco está en la calle Mayor. |
+| word_order | (sıralama) | Hay un parque cerca de mi casa. |
+| translate_tr_es | Buralarda süpermarket var mı? | ¿Hay un supermercado por aquí? |
+| translate_es_tr | Hay tres sillas en la cocina. | Mutfakta üç sandalye var. (şıklar: Sandalyeler mutfakta., Mutfakta sandalye yok.) |
+
+## Temel edatlar
+
+Türkçedeki -e, -de, -den, ile, için gibi ekler İspanyolcada kelimenin önüne gelen edatlarla söylenir: a Madrid (Madrid’e), en casa (evde), de Turquía (Türkiye’den).
+
+- Voy a la universidad en autobús. — Üniversiteye otobüsle gidiyorum.
+- Un café con leche y sin azúcar, por favor. — Şekersiz bir sütlü kahve, lütfen.
+- El regalo es para ti. — Hediye senin için.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | Voy ___ Madrid. | a (şıklar: en, de, con) |
+| multiple_choice | Estoy ___ casa. | en (şıklar: a, de, con) |
+| fill_blank | Un café ___ leche. (ile) | con |
+| fill_blank | Soy ___ Estambul. | de |
+| fill_blank | Voy al trabajo ___ metro. | en |
+| fill_blank | Un té ___ azúcar, por favor. (-sız) | sin |
+| fill_blank | Este regalo es ___ ti. (için) | para |
+| fill_blank | La clase empieza ___ las nueve. | a |
+| multiple_choice | ¿Vienes ___? (benimle) | conmigo (şıklar: con mí, con yo, con me) |
+| fix_sentence | Voy a el cine con Ana. | Voy al cine con Ana. |
+| fix_sentence | El coche del Ana es rojo. | El coche de Ana es rojo. |
+| word_order | (sıralama) | La farmacia está al lado del banco. |
+| translate_tr_es | İşe otobüsle gidiyorum. | Voy al trabajo en autobús · Voy a trabajar en autobús |
+
+## İyelik sıfatları
+
+İyelik sıfatı (benim, senin…) ismin önüne gelir. Sahibine göre değil, sahip olunan şeye göre çoğul olur: mis libros (kitaplarım). nuestro ve vuestro cinsiyete de uyar.
+
+- Mi hermano se llama Toprak. — Kardeşimin adı Toprak.
+- ¿Dónde están tus llaves? — Anahtarların nerede?
+- Nuestra casa es pequeña. — Evimiz küçük.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | ___ casa (benim) | mi (şıklar: mí, me, mis) |
+| multiple_choice | ___ amigos (senin) | tus (şıklar: tu, tú, tuyos) |
+| multiple_choice | ___ familia (bizim) | nuestra (şıklar: nuestro, nuestros, nosotros) |
+| fill_blank | ___ padres viven en Estambul. (benim) | Mis |
+| fill_blank | ¿Cómo se llama ___ hermana? (senin) | tu |
+| fill_blank | Ana y ___ novio. (onun) | su |
+| fill_blank | ___ piso es muy grande. (bizim) | Nuestro |
+| fill_blank | ¿Dónde está ___ casa? (sizin, vosotros) | vuestra |
+| multiple_choice | Carlos y Elena tienen un perro. ___ perro es negro. | Su (şıklar: Sus, Suyo, Nuestro) |
+| fix_sentence | Mis hermano es alto. | Mi hermano es alto. |
+| fix_sentence | Nuestro casa es pequeña. | Nuestra casa es pequeña. |
+| word_order | (sıralama) | Mi madre trabaja en un hospital. |
+| translate_tr_es | Anahtarlarım nerede? | ¿Dónde están mis llaves? |
+
+## Sayılar (0–100)
+
+0–15 ezberlenir; 16–29 tek kelimedir (dieciséis, veintiuno); 31’den sonra onlar + y + birler yazılır (treinta y uno).
+
+- Tengo veintiún años. — Yirmi bir yaşındayım.
+- Mi abuelo tiene setenta y dos años. — Dedem yetmiş iki yaşında.
+- Son cuarenta euros. — Kırk avro.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | 17 | diecisiete (şıklar: diezsiete, dieciséte, setenta) |
+| multiple_choice | 35 | treinta y cinco (şıklar: treintaicinco, treinta cinco, trescinco) |
+| fill_blank | 22 = ___ | veintidós |
+| fill_blank | 14 = ___ | catorce |
+| fill_blank | 50 = ___ | cincuenta |
+| multiple_choice | 100 kişi: ___ personas | cien (şıklar: ciento, cientos, cienta) |
+| multiple_choice | 21 yaşındayım: Tengo ___ años. | veintiún (şıklar: veintiuno, veinte y uno, veintiuna) |
+| fill_blank | 48 = cuarenta y ___ | ocho |
+| fill_blank | 16 = ___ | dieciséis |
+| fix_sentence | Tengo veinte y tres años. | Tengo veintitrés años. |
+| word_order | (sıralama) | Mi padre tiene cuarenta y cinco años. |
+| translate_tr_es | On beş avro. | Quince euros · Son quince euros |
+| translate_es_tr | Hay setenta estudiantes. | 70 öğrenci var. (şıklar: 17 öğrenci var., 60 öğrenci var.) |
+
+## Saat
+
+Saat ser ile söylenir: Es la una (saat bir), Son las dos (saat iki). Çeyrek için cuarto, buçuk için media; yarımdan sonra bir sonraki saatten menos ile geri sayılır.
+
+- ¿Qué hora es? —Son las diez y media. — Saat kaç? —On buçuk.
+- La clase es a las nueve. — Ders saat dokuzda.
+- Me acuesto a las once de la noche. — Gece on birde yatarım.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | 1:00 | Es la una. (şıklar: Son la una., Es las una., Son las uno.) |
+| multiple_choice | 5:30 | Son las cinco y media. (şıklar: Son las cinco y cuarto., Son las seis menos media., Es la cinco y media.) |
+| fill_blank | ¿A qué hora? —___ las ocho. | A |
+| multiple_choice | 7:15 | Son las siete y cuarto. (şıklar: Son las siete y media., Son las siete menos cuarto., Son las ocho menos cuarto.) |
+| multiple_choice | 8:45 | Son las nueve menos cuarto. (şıklar: Son las ocho menos cuarto., Son las ocho y cuarto., Son las nueve y cuarto.) |
+| multiple_choice | 10:50 | Son las once menos diez. (şıklar: Son las diez menos diez., Es la once menos diez., Son las once y diez.) |
+| fill_blank | 2:20 → Son las dos y ___. | veinte |
+| fill_blank | 12:30 → Son las doce y ___. | media |
+| fix_sentence | Son la una y media. | Es la una y media. |
+| fix_sentence | Es las cuatro. | Son las cuatro. |
+| word_order | (sıralama) | La película empieza a las nueve. |
+| translate_tr_es | Saat yedide kalkıyorum. | Me levanto a las siete · Yo me levanto a las siete |
+| translate_es_tr | Son las seis menos cuarto. | Saat altıya çeyrek var. (şıklar: Saat altıyı çeyrek geçiyor., Saat altı buçuk.) |
+
+## Günler, aylar ve tarihler
+
+Gün ve ay adları küçük harfle yazılır. Tarih “el + gün + de + ay” kalıbıyla söylenir: el veintiuno de octubre.
+
+- Hoy es miércoles. — Bugün çarşamba.
+- Mi cumpleaños es el doce de marzo. — Doğum günüm 12 Mart’ta.
+- Los sábados no trabajo. — Cumartesileri çalışmam.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | Pazartesi | lunes (şıklar: martes, domingo, jueves) |
+| multiple_choice | “21 Ekim” | el veintiuno de octubre (şıklar: el octubre veintiuno, veintiuno octubre, el veintiuno en octubre) |
+| fill_blank | Los ___ voy al gimnasio. (cumartesi) | sábados |
+| fill_blank | Hoy es ___. (cuma) | viernes |
+| fill_blank | Mi cumpleaños es en ___. (temmuz) | julio |
+| multiple_choice | “Pazar günü ailemle yemek yerim.” | El domingo como con mi familia. (şıklar: En domingo como con mi familia., Los domingo como con mi familia., En el domingo como con mi familia.) |
+| fill_blank | El 14 ___ febrero. | de |
+| fix_sentence | Mi cumpleaños es en el 5 de mayo. | Mi cumpleaños es el 5 de mayo. · Mi cumpleaños es el cinco de mayo. |
+| fix_sentence | Trabajo en lunes. | Trabajo el lunes. · Trabajo los lunes. |
+| word_order | (sıralama) | Hoy es el veintiuno de octubre. |
+| translate_tr_es | Bugün günlerden ne? | ¿Qué día es hoy? |
+| translate_tr_es | Doğum günüm martta. | Mi cumpleaños es en marzo |
+| translate_es_tr | Los domingos no trabajo. | Pazarları çalışmam. (şıklar: Bu pazar çalışmıyorum., Pazar günü çalıştım.) |
+
+## Dönüşlü fiiller ve günlük rutin
+
+Eylem kişinin kendisine dönüyorsa fiil dönüşlüdür; mastarı -se ile biter: levantarse (kalkmak), llamarse (adı … olmak). Çekimde fiilin önüne me, te, se, nos, os, se gelir.
+
+- Me levanto a las siete. — Saat yedide kalkarım.
+- ¿Cómo te llamas? —Me llamo Egemen. — Adın ne? —Adım Egemen.
+- Nos acostamos tarde. — Geç yatarız.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ levanto a las siete. | me |
+| multiple_choice | ¿Cómo ___ llamas? | te (şıklar: se, me, tu) |
+| fill_blank | Ella ___ ducha por la mañana. | se |
+| fill_blank | Nosotros ___ acostamos a las once. | nos |
+| fill_blank | Vosotros ___ levantáis tarde. | os |
+| fill_blank | Ellos ___ (llamarse) Ana y Pablo. | se llaman |
+| fill_blank | Yo ___ (despertarse) a las seis. | me despierto |
+| multiple_choice | Tú ___ (acostarse) tarde. | te acuestas (şıklar: te acostas, se acuesta, te acuesto) |
+| fix_sentence | Yo levanto me a las ocho. | Yo me levanto a las ocho. · Me levanto a las ocho. |
+| fix_sentence | Me llamo es Egemen. | Me llamo Egemen. |
+| word_order | (sıralama) | Me ducho por la mañana. |
+| translate_tr_es | Adım Ayşe. | Me llamo Ayşe |
+| translate_tr_es | Saat on birde yatıyoruz. | Nos acostamos a las once |
+
+## Gustar
+
+Gustar “sevmek, hoşa gitmek” demektir ama yapı terstir: “bana hoş geliyor” gibi. Sevilen şey öznedir: tekilse gusta, çoğulsa gustan.
+
+- Me gusta mucho el chocolate. — Çikolatayı çok severim.
+- ¿Te gusta viajar? — Seyahat etmeyi sever misin?
+- A mi madre le gustan las flores. — Annem çiçekleri sever.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| multiple_choice | Me ___ el café. | gusta (şıklar: gustan, gusto, gustas) |
+| multiple_choice | Me ___ las fresas. | gustan (şıklar: gusta, gustas, gusto) |
+| fill_blank | ¿___ gusta bailar? (sana) | Te |
+| fill_blank | A mi padre ___ gusta el fútbol. | le |
+| fill_blank | Nos ___ los perros. | gustan |
+| fill_blank | No me ___ cocinar. | gusta |
+| fill_blank | ¿___ gusta Madrid? (size, vosotros) | Os |
+| multiple_choice | A Ana y a Luis ___ gusta viajar. | les (şıklar: le, se, los) |
+| fix_sentence | Yo gusto el chocolate. | Me gusta el chocolate. · A mí me gusta el chocolate. |
+| fix_sentence | Me gustan el té. | Me gusta el té. |
+| word_order | (sıralama) | A mi hermana le gustan los gatos. |
+| translate_tr_es | Kitap okumayı severim. | Me gusta leer · Me gusta leer libros · A mí me gusta leer |
+| translate_es_tr | ¿Te gustan las películas españolas? | İspanyol filmlerini sever misin? (şıklar: İspanyol filmleri izliyor musun?, İspanyol filmlerini seviyor muyum?) |
+
+## Ir a + mastar (yakın gelecek)
+
+Plan ve yakın gelecek için ir fiilinin çekimi + a + mastar kullanılır: Voy a estudiar (ders çalışacağım).
+
+- Mañana voy a visitar a mis abuelos. — Yarın dedemlerle ninemi ziyaret edeceğim.
+- ¿Qué vas a hacer el sábado? — Cumartesi ne yapacaksın?
+- Vamos a comer en un restaurante. — Bir restoranda yemek yiyeceğiz.
+
+| Tip | Soru | Doğru cevap |
+|---|---|---|
+| fill_blank | Yo ___ a estudiar esta tarde. | voy |
+| multiple_choice | Nosotros ___ a viajar a España. | vamos (şıklar: van, vais, voy) |
+| fill_blank | ¿Qué vas ___ hacer mañana? | a |
+| fill_blank | Ellos ___ a cenar en casa. | van |
+| fill_blank | Vosotros ___ a ver una película. | vais |
+| fill_blank | Ella va a ___ (llamar) a su madre. | llamar |
+| multiple_choice | “Yağmur yağacak.” | Va a llover. (şıklar: Va llover., Va a llueve., Es a llover.) |
+| fix_sentence | Voy estudiar mañana. | Voy a estudiar mañana. · Mañana voy a estudiar. |
+| fix_sentence | Vamos a comemos pizza. | Vamos a comer pizza. |
+| word_order | (sıralama) | El sábado voy a visitar a mis abuelos. |
+| translate_tr_es | Bu akşam dışarı çıkacağım. | Esta noche voy a salir · Voy a salir esta noche |
+| translate_tr_es | Ne yapacaksın? | ¿Qué vas a hacer? |
+| translate_es_tr | No vamos a trabajar el domingo. | Pazar günü çalışmayacağız. (şıklar: Pazar günü çalışıyoruz., Pazar günü çalışmak istemiyoruz.) |
+

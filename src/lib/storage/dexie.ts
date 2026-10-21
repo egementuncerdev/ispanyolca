@@ -1,6 +1,6 @@
 /* Repository arayüzlerinin IndexedDB (Dexie) uygulaması */
 import { AppDB, TABLES } from './db';
-import type { BackupFile, BackupService, CardRepo, EventsRepo, FavoritesRepo, ReviewRepo, SessionRepo, SettingsRepo } from './repositories';
+import type { BackupFile, BackupService, CardRepo, EventsRepo, FavoritesRepo, QuizResultRepo, ReviewRepo, SessionRepo, SettingsRepo } from './repositories';
 import { DEFAULT_SETTINGS, type Settings } from '@/types/user';
 
 export const BACKUP_VERSION = 1;
@@ -54,6 +54,12 @@ export function createRepos(db: AppDB) {
     byDay: (dayKey) => db.sessions.where('dayKey').equals(dayKey).toArray()
   };
 
+  const quizResults: QuizResultRepo = {
+    async add(r) { await db.quizResults.add(r); },
+    all: () => db.quizResults.toArray(),
+    byKind: (kind) => db.quizResults.where('kind').equals(kind).toArray()
+  };
+
   const backup: BackupService = {
     async exportAll() {
       const data: Record<string, unknown[]> = {};
@@ -75,7 +81,7 @@ export function createRepos(db: AppDB) {
     }
   };
 
-  return { settings, favorites, events, cards, reviews, sessions, backup };
+  return { settings, favorites, events, cards, reviews, sessions, quizResults, backup };
 }
 
 export class BackupError extends Error {}

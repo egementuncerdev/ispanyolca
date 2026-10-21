@@ -1,6 +1,6 @@
 /* Repository arayüzleri. Uygulama yalnız bunları kullanır; ileride Supabase vb.
    bir backend'e geçmek = bu arayüzlerin yeni bir uygulamasını yazmak. */
-import type { ActivityEvent, CardState, Favorite, ReviewLog, Settings, StudySession } from '@/types/user';
+import type { ActivityEvent, CardState, Favorite, QuizResult, ReviewLog, Settings, StudySession } from '@/types/user';
 
 export interface SettingsRepo {
   get(): Promise<Settings>;
@@ -38,6 +38,12 @@ export interface ReviewRepo {
 export interface SessionRepo {
   add(s: Omit<StudySession, 'id'>): Promise<void>;
   byDay(dayKey: string): Promise<StudySession[]>;
+}
+
+export interface QuizResultRepo {
+  add(r: Omit<QuizResult, 'id'>): Promise<void>;
+  all(): Promise<QuizResult[]>;
+  byKind(kind: string): Promise<QuizResult[]>;
 }
 
 export interface BackupFile {
